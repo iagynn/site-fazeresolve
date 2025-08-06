@@ -11,11 +11,12 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
         .gradient-text {
             background: linear-gradient(to right, #4f46e5, #7c3aed);
             -webkit-background-clip: text;
-            background-clip: text; /* <-- CORREÇÃO ADICIONADA AQUI */
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
@@ -26,6 +27,11 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-indigo-600">Faz & Resolve</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#funcionalidades" class="text-gray-600 hover:text-indigo-600">Funcionalidades</a>
+                <a href="#precos" class="text-gray-600 hover:text-indigo-600">Preços</a>
+                <a href="#faq" class="text-gray-600 hover:text-indigo-600">FAQ</a>
+            </nav>
             <a href="#contato" class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
                 Entre em Contato
             </a>
@@ -45,55 +51,81 @@
         </div>
     </main>
 
+    <!-- Seção "Para Quem é?" -->
+    <section id="para-quem-e" class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-12">Perfeito para o seu tipo de negócio</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center"><div class="bg-indigo-100 p-4 rounded-full mb-3"><img src="https://placehold.co/48x48/FFFFFF/4f46e5?text=🔨" alt="Ícone de martelo"></div><h4 class="font-semibold">Marcenarias</h4></div>
+                <div class="flex flex-col items-center"><div class="bg-indigo-100 p-4 rounded-full mb-3"><img src="https://placehold.co/48x48/FFFFFF/4f46e5?text=🛋️" alt="Ícone de sofá"></div><h4 class="font-semibold">Tapeçarias</h4></div>
+                <div class="flex flex-col items-center"><div class="bg-indigo-100 p-4 rounded-full mb-3"><img src="https://placehold.co/48x48/FFFFFF/4f46e5?text=🚗" alt="Ícone de carro"></div><h4 class="font-semibold">Oficinas e Funilarias</h4></div>
+                <div class="flex flex-col items-center"><div class="bg-indigo-100 p-4 rounded-full mb-3"><img src="https://placehold.co/48x48/FFFFFF/4f46e5?text=✨" alt="Ícone de brilho"></div><h4 class="font-semibold">E Muitos Outros!</h4></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Seção de Funcionalidades -->
-    <section class="bg-white py-16 md:py-20">
+    <section id="funcionalidades" class="bg-gray-50 py-16 md:py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h3 class="text-3xl font-bold">Tudo o que você precisa em um só lugar</h3>
                 <p class="text-gray-500 mt-2">Desde o orçamento até ao controlo de estoque, nós resolvemos.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1: Gestão de Pedidos -->
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2">Gestão de Pedidos</h4>
-                    <p class="text-gray-600">Organize seus serviços com um painel Kanban intuitivo e nunca mais perca um prazo.</p>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <h4 class="text-xl font-semibold mb-2">Gestão de Pedidos</h4><p class="text-gray-600">Organize seus serviços com um painel Kanban intuitivo e nunca mais perca um prazo.</p>
                 </div>
-                <!-- Card 2: Inteligência Financeira -->
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2">Inteligência Financeira</h4>
-                    <p class="text-gray-600">Saiba o lucro exato de cada serviço, controle despesas e veja seu faturamento crescer.</p>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <h4 class="text-xl font-semibold mb-2">Inteligência Financeira</h4><p class="text-gray-600">Saiba o lucro exato de cada serviço, controle despesas e veja seu faturamento crescer.</p>
                 </div>
-                <!-- Card 3: Automação com IA -->
-                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M12 21v-1m0-16a9 9 0 110 18 9 9 0 010-18z" /></svg>
-                    </div>
-                    <h4 class="text-xl font-semibold mb-2">Automação com IA</h4>
-                    <p class="text-gray-600">Deixe a nossa Inteligência Artificial ler notas fiscais e organizar seu estoque automaticamente.</p>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <h4 class="text-xl font-semibold mb-2">Automação com IA</h4><p class="text-gray-600">Deixe nossa IA ler notas fiscais e organizar seu estoque automaticamente.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Seção de Preços -->
+    <section id="precos" class="bg-white py-16 md:py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold">Planos transparentes para o seu crescimento</h3>
+            <p class="text-gray-500 mt-2 mb-12">Escolha o plano que melhor se adapta ao seu momento.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Plano Essencial -->
+                <div class="border rounded-lg p-6 flex flex-col"><h4 class="text-lg font-bold">Essencial</h4><p class="text-4xl font-bold my-4">R$ 59<span class="text-lg font-medium">/mês</span></p><ul class="space-y-2 text-gray-600 text-left mb-6"><li>✅ Gestão de Pedidos</li><li>✅ Portal do Cliente</li><li>✅ Gestão de Clientes</li></ul><a href="#contato" class="mt-auto bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg">Saber Mais</a></div>
+                <!-- Plano Profissional -->
+                <div class="border-2 border-indigo-600 rounded-lg p-6 flex flex-col relative"><div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div><h4 class="text-lg font-bold">Profissional</h4><p class="text-4xl font-bold my-4">R$ 129<span class="text-lg font-medium">/mês</span></p><ul class="space-y-2 text-gray-600 text-left mb-6"><li>✅ Tudo do Essencial</li><li>✅ Gestão de Estoque</li><li>✅ Integração Google Calendar</li></ul><a href="#contato" class="mt-auto bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg">Saber Mais</a></div>
+                <!-- Plano Premium -->
+                <div class="border rounded-lg p-6 flex flex-col"><h4 class="text-lg font-bold">Premium</h4><p class="text-4xl font-bold my-4">R$ 199<span class="text-lg font-medium">/mês</span></p><ul class="space-y-2 text-gray-600 text-left mb-6"><li>✅ Tudo do Profissional</li><li>✅ Estoque Inteligente com IA</li><li>✅ Automação WhatsApp</li></ul><a href="#contato" class="mt-auto bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg">Saber Mais</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section id="faq" class="bg-gray-50 py-16 md:py-20">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h3 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h3>
+            <div class="space-y-4">
+                <div><h4 class="font-semibold">Preciso de conhecimento técnico para usar?</h4><p class="text-gray-600 mt-1">Não! O Faz & Resolve foi desenhado para ser intuitivo. Se você sabe usar o WhatsApp, sabe usar a nossa plataforma.</p></div>
+                <div class="border-t pt-4"><h4 class="font-semibold">Os meus dados estão seguros?</h4><p class="text-gray-600 mt-1">Sim. Usamos as melhores práticas de segurança e cloud computing para garantir que os dados da sua empresa e dos seus clientes estejam sempre protegidos.</p></div>
+                <div class="border-t pt-4"><h4 class="font-semibold">Como funciona o suporte?</h4><p class="text-gray-600 mt-1">Oferecemos suporte via e-mail e WhatsApp para todos os planos, com atendimento prioritário para os clientes do plano Premium.</p></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Seção de Contato -->
-    <section id="contato" class="bg-gray-50 py-16 md:py-20">
+    <section id="contato" class="bg-white py-16 md:py-20">
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-3xl font-bold">Interessado em ser um dos primeiros a usar?</h3>
             <p class="text-gray-600 mt-2 mb-8">Entre em contato para saber mais sobre o nosso lançamento.</p>
-            <p class="text-lg font-semibold text-indigo-600">seu.email.de.contato@gmail.com</p>
+            <p class="text-lg font-semibold text-indigo-600">iago.bocardi@fazeresolve.com</p>
         </div>
     </section>
 
     <!-- Rodapé -->
-    <footer class="bg-white border-t">
-        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
-            &copy; 2025 Faz & Resolve. Todos os direitos reservados.
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-400">
+            &copy; 2025 Faz & Resolve. Todos os direitos reservados. | <a href="privacy.html" class="underline hover:text-white">Política de Privacidade</a>
         </div>
     </footer>
 
