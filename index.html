@@ -1,42 +1,58 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faz & Resolve - A Plataforma para Prestadores de Serviços</title>
+    <title>Faz & Resolve - Gestão Inteligente para Negócios de Serviço</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <meta name="facebook-domain-verification" content="o5kccckd94nmsbkt3tdci9orxr34xd" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
         }
         .gradient-text {
-            background: linear-gradient(to right, #4f46e5, #7c3aed);
+            background: linear-gradient(to right, #4f46e5, #818cf8);
             -webkit-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .feature-icon {
-            background-color: #e0e7ff;
-            color: #4f46e5;
-            border-radius: 50%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
             display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1rem;
+            border-radius: 0.75rem;
+            background-color: #e0e7ff;
+            color: #4338ca;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top: 2px solid white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
+    <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-indigo-600">Faz & Resolve</h1>
+            <a href="#" class="flex items-center">
+                <img src="WhatsApp Image 2025-09-12 at 11.59.18.jpeg" alt="Logo Faz & Resolve" class="h-10 w-auto">
+            </a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#funcionalidades" class="text-gray-600 hover:text-indigo-600">Funcionalidades</a>
+                <a href="#depoimentos" class="text-gray-600 hover:text-indigo-600">Depoimentos</a>
                 <a href="#precos" class="text-gray-600 hover:text-indigo-600">Preços</a>
                 <a href="#faq" class="text-gray-600 hover:text-indigo-600">FAQ</a>
             </nav>
@@ -44,146 +60,324 @@
                 <a href="https://app.fazeresolve.com/login" class="text-indigo-600 font-semibold px-4 py-2 rounded-lg hover:bg-indigo-50 transition-colors">
                     Login
                 </a>
-                <a href="#contato" class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
-                    Entre em Contato
+                <a href="#contato" class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors shadow-sm">
+                    Agende uma Demo
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <main class="container mx-auto px-6 py-16 md:py-24 text-center">
-        <h2 class="text-4xl md:text-6xl font-bold mb-4">
-            A gestão do seu negócio de serviços, <span class="gradient-text">finalmente inteligente.</span>
+        <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+            Dobre o seu lucro, <span class="gradient-text">sem dobrar o seu trabalho.</span>
         </h2>
         <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Pare de perder tempo com planilhas e WhatsApp. O Faz & Resolve é a plataforma SaaS que centraliza os seus pedidos, finanças e clientes, usando dados para ajudar o seu negócio a crescer.
+            Centralize pedidos, clientes e finanças. O Faz & Resolve automatiza as suas tarefas para que você possa focar no que realmente importa: o crescimento do seu negócio.
         </p>
-        <div class="bg-white p-6 rounded-lg shadow-lg inline-block">
-            <p class="text-gray-700 font-semibold">Plataforma em desenvolvimento. Lançamento em breve!</p>
+        <div class="bg-white p-6 rounded-lg shadow-lg inline-block border border-gray-100">
+             <h3 class="text-lg font-bold text-gray-800 mb-2">🚀 Lançamento Oficial em Breve!</h3>
+             <p class="text-gray-600 mb-4">Seja um dos primeiros a revolucionar a sua gestão. Inscreva-se para acesso antecipado e descontos exclusivos.</p>
+             <form class="flex flex-col sm:flex-row gap-2 justify-center">
+                <input type="email" placeholder="Seu melhor e-mail" class="w-full sm:w-auto flex-grow px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:outline-none" required>
+                <button type="submit" class="bg-indigo-600 text-white font-semibold px-6 py-2 rounded-md hover:bg-indigo-700 transition-colors">Quero Acesso Antecipado</button>
+             </form>
         </div>
     </main>
 
+    <!-- Features Section -->
     <section id="funcionalidades" class="bg-gray-50 py-16 md:py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h3 class="text-3xl font-bold">Uma plataforma, todas as ferramentas.</h3>
                 <p class="text-gray-500 mt-2 max-w-2xl mx-auto">Funcionalidades criadas para quem vive do seu ofício e não tem tempo a perder com tarefas manuais.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
                     <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10v-3.333M15 7v3.333m-3 4.333V17"></path></svg></div>
-                    <h4 class="text-xl font-semibold mb-2">Painel Kanban Visual</h4><p class="text-gray-600">Organize os seus serviços com um painel intuitivo. Arraste os pedidos pelas etapas (Pendente, Aceito, Agendado, Finalizado) e tenha uma visão clara do seu fluxo de trabalho.</p>
+                    <h4 class="text-xl font-semibold mb-2">Painel Kanban Visual</h4><p class="text-gray-600">Organize os seus serviços com um painel intuitivo. Arraste os pedidos pelas etapas e tenha uma visão clara do seu fluxo de trabalho.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
                     <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg></div>
-                    <h4 class="text-xl font-semibold mb-2">Portal do Cliente</h4><p class="text-gray-600">Ofereça um link seguro para o seu cliente acompanhar o status do serviço, aprovar orçamentos e ver o histórico, tudo de forma profissional e transparente.</p>
+                    <h4 class="text-xl font-semibold mb-2">Portal do Cliente</h4><p class="text-gray-600">Ofereça um link seguro para o seu cliente acompanhar o status do serviço, aprovar orçamentos e ver o histórico.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
                     <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div>
-                    <h4 class="text-xl font-semibold mb-2">Inteligência Financeira</h4><p class="text-gray-600">Registe custos e despesas por serviço e saiba o lucro líquido exato de cada trabalho. Tome decisões baseadas em dados, não em suposições.</p>
+                    <h4 class="text-xl font-semibold mb-2">Inteligência Financeira</h4><p class="text-gray-600">Registe custos por serviço e saiba o lucro líquido exato de cada trabalho. Tome decisões baseadas em dados.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                   <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
-                   <h4 class="text-xl font-semibold mb-2">Mapa de Demandas</h4><p class="text-gray-600">Visualize todos os seus pedidos num mapa interativo. Descubra as regiões com maior concentração de clientes e otimize as suas rotas e estratégias de marketing local.</p>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
+                    <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
+                    <h4 class="text-xl font-semibold mb-2">Mapa de Demandas</h4><p class="text-gray-600">Visualize os seus pedidos num mapa, descubra as regiões com mais clientes e otimize as suas rotas e marketing local.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                    <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div>
-                    <h4 class="text-xl font-semibold mb-2">Clientes Mais Valiosos</h4><p class="text-gray-600">O nosso sistema analisa o seu histórico e mostra automaticamente quem são os seus melhores clientes — aqueles que mais compram e geram mais lucro para si.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
                     <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg></div>
-                    <h4 class="text-xl font-semibold mb-2">Estoque Inteligente com IA</h4><p class="text-gray-600">Tire uma foto a uma nota fiscal. A nossa inteligência artificial lê, identifica os produtos e adiciona-os ao seu estoque com um clique, poupando horas de trabalho manual.</p>
+                    <h4 class="text-xl font-semibold mb-2">Estoque Inteligente com IA</h4><p class="text-gray-600">Tire foto a uma nota fiscal. A nossa IA lê, identifica os produtos e adiciona-os ao seu estoque com um clique, poupando horas.</p>
                 </div>
-                 <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
                     <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
-                    <h4 class="text-xl font-semibold mb-2">Automação WhatsApp</h4><p class="text-gray-600">Um assistente virtual qualifica novos pedidos 24/7, recolhendo informações, endereço e agendamentos, entregando o pedido pronto para si.</p>
+                    <h4 class="text-xl font-semibold mb-2">Automação WhatsApp</h4><p class="text-gray-600">Um assistente virtual qualifica novos pedidos 24/7, recolhendo informações, endereço e agendamentos.</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-                    <div class="feature-icon"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></div>
-                    <h4 class="text-xl font-semibold mb-2">Agenda Inteligente</h4><p class="text-gray-600">Sincronize os seus agendamentos com o Google Calendar e tenha a sua agenda de serviços sempre atualizada e acessível em qualquer dispositivo.</p>
+                <!-- New Gemini Feature 1 -->
+                <div class="bg-white p-6 rounded-lg border-2 border-indigo-300 shadow-sm flex flex-col">
+                    <div class="feature-icon"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg></div>
+                    <h4 class="text-xl font-semibold mb-2">Comunicação Mágica ✨</h4><p class="text-gray-600">Gere mensagens profissionais, descrições de serviços e orçamentos com um clique. Deixe a nossa IA encontrar as palavras certas para si.</p>
+                </div>
+                 <!-- New Gemini Feature 2 -->
+                <div class="bg-white p-6 rounded-lg border-2 border-indigo-300 shadow-sm flex flex-col">
+                    <div class="feature-icon"><svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg></div>
+                    <h4 class="text-xl font-semibold mb-2">Orçamentos Inteligentes ✨</h4><p class="text-gray-600">Liste os materiais e serviços, e a nossa IA cria um orçamento detalhado e profissional para enviar aos seus clientes em segundos.</p>
                 </div>
             </div>
         </div>
     </section>
 
-  <section id="precos" class="bg-white py-16 md:py-20">
-    <div class="container mx-auto px-6 text-center">
-        <h3 class="text-3xl font-bold">Planos transparentes para o seu crescimento</h3>
-        <p class="text-gray-500 mt-2 mb-12">Escolha o plano que melhor se adapta ao seu momento.</p>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
-            
-            <div class="border rounded-lg p-6 flex flex-col h-full">
-                <h4 class="text-lg font-bold">Essencial</h4>
-                <p class="text-4xl font-bold my-4">R$ 79<span class="text-lg font-medium text-gray-500">/mês</span></p>
-                <ul class="space-y-3 text-gray-600 text-left mb-6 flex-grow">
-                    <li><span class="text-green-500">✅</span> Gestão de Pedidos</li>
-                    <li><span class="text-green-500">✅</span> Portal do Cliente</li>
-                    <li><span class="text-green-500">✅</span> Gestão de Clientes</li>
-                    <li><span class="font-semibold">👥 Limite de 1 Utilizador</span></li>
-                </ul>
-               <a href="https://app.fazeresolve.com/register?plano=Essencial" class="mt-auto bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300">Registar Agora</a>
-            </div>
+    <!-- Gemini API Demo Section -->
+    <section id="gemini-demo" class="bg-white py-16 md:py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold">✨ Veja a Magia Acontecer: Teste a Nossa IA</h3>
+            <p class="text-gray-500 mt-2 max-w-2xl mx-auto">
+                Diga-nos o que precisa e a nossa Inteligência Artificial, powered by Google Gemini, cria a mensagem perfeita para o seu cliente.
+            </p>
 
-            <div class="border-2 border-indigo-600 rounded-lg p-6 flex flex-col relative h-full">
-                <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div>
-                <h4 class="text-lg font-bold">Profissional</h4>
-                <p class="text-4xl font-bold my-4">R$ 129<span class="text-lg font-medium text-gray-500">/mês</span></p>
-                <ul class="space-y-3 text-gray-600 text-left mb-6 flex-grow">
-                    <li><span class="text-green-500">✅</span> Tudo do Essencial</li>
-                    <li><span class="text-green-500">✅</span> Gestão de Estoque</li>
-                    <li><span class="text-green-500">✅</span> Agenda Inteligente (Google Calendar)</li>
-                    <li><span class="font-semibold">👥 Limite de 2 Utilizadores</span></li>
-                    <li class="text-sm">➕ R$ 29/mês por utilizador adicional</li>
-                </ul>
-               <a href="https://app.fazeresolve.com/register?plano=Profissional" class="mt-auto bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-indigo-700">Registar Agora</a>
+            <div class="max-w-2xl mx-auto mt-8 bg-gray-50 p-6 sm:p-8 rounded-xl border border-gray-200 shadow-sm">
+                <label for="prompt-input" class="block text-left font-semibold mb-2 text-gray-700">O que você quer comunicar?</label>
+                <textarea id="prompt-input" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none" rows="3" placeholder="Ex: avisar cliente que chegarei 15 minutos atrasado por causa do trânsito."></textarea>
+                <button id="generate-button" class="mt-4 w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2">
+                    <svg id="button-icon" class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg>
+                    <span id="button-text">Gerar Mensagem Profissional</span>
+                    <div id="loading-spinner" class="hidden spinner"></div>
+                </button>
+                <div id="response-container" class="mt-6 text-left bg-white p-4 rounded-lg border border-gray-200 hidden">
+                    <h4 class="font-semibold text-gray-800 mb-2">Sugestão de Mensagem:</h4>
+                    <p id="gemini-response" class="text-gray-700 whitespace-pre-wrap"></p>
+                </div>
+                 <p id="error-message" class="mt-4 text-red-500 text-sm hidden"></p>
             </div>
-
-            <div class="border rounded-lg p-6 flex flex-col h-full">
-                <h4 class="text-lg font-bold">Premium</h4>
-                <p class="text-4xl font-bold my-4">R$ 199<span class="text-lg font-medium text-gray-500">/mês</span></p>
-                <ul class="space-y-3 text-gray-600 text-left mb-6 flex-grow">
-                    <li><span class="text-green-500">✅</span> Tudo do Profissional</li>
-                    <li><span class="text-green-500">✅</span> Estoque Inteligente com IA</li>
-                    <li><span class="text-green-500">✅</span> Automação WhatsApp 24/7</li>
-                    <li><span class="text-green-500">✅</span> Mapa de Demandas & Clientes Valiosos</li>
-                    <li><span class="font-semibold">👥 Limite de 5 Utilizadores</span></li>
-                    <li class="text-sm">➕ R$ 19/mês por utilizador adicional</li>
-                </ul>
-                <a href="https://app.fazeresolve.com/register?plano=Premium" class="mt-auto bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg hover:bg-gray-300">Registar Agora</a>
-            </div>
-            
         </div>
-    </div>
-</section>
+    </section>
 
-    <section id="faq" class="bg-gray-50 py-16 md:py-20">
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="bg-gray-50 py-16 md:py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold">O que os nossos clientes dizem</h3>
+                <p class="text-gray-500 mt-2 max-w-2xl mx-auto">Milhares de profissionais já confiam no Faz & Resolve para otimizar o seu dia a dia.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/100x100/2563eb/ffffff?text=JS" alt="Cliente João Silva" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold text-lg">João Silva</p>
+                            <p class="text-gray-500">Eletricista Profissional</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Desde que comecei a usar o Faz & Resolve, a organização dos meus serviços melhorou 100%. Finalmente sei exatamente quanto estou a lucrar em cada trabalho. Recomendo!"</p>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/100x100/10b981/ffffff?text=MA" alt="Cliente Maria Almeida" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold text-lg">Maria Almeida</p>
+                            <p class="text-gray-500">Limpeza & Cia</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"O portal do cliente é fantástico. Meus clientes sentem-se mais seguros ao acompanhar o serviço. Passa uma imagem muito mais profissional e poupa-me tempo a responder mensagens."</p>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <img src="https://placehold.co/100x100/f59e0b/ffffff?text=CP" alt="Cliente Carlos Pereira" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <p class="font-bold text-lg">Carlos Pereira</p>
+                            <p class="text-gray-500">Refrigeração Total</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"A automação do WhatsApp mudou o meu negócio. Os pedidos já chegam qualificados para mim, só preciso agendar. Ganhei horas preciosas no meu dia."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precos" class="bg-gray-50 py-16 md:py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold">Planos transparentes para o seu crescimento</h3>
+            <p class="text-gray-500 mt-2 max-w-2xl mx-auto">Escolha o plano que melhor se adapta ao seu momento. Cancele quando quiser.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mt-12">
+                <div class="border rounded-lg p-6 flex flex-col h-full bg-white shadow-sm">
+                    <h4 class="text-lg font-bold">Essencial</h4>
+                    <p class="text-4xl font-bold my-4">R$ 79<span class="text-lg font-medium text-gray-500">/mês</span></p>
+                    <ul class="space-y-3 text-gray-600 text-left mb-6 flex-grow">
+                        <li><span class="text-green-500 font-bold">✓</span> Gestão de Pedidos</li>
+                        <li><span class="text-green-500 font-bold">✓</span> Portal do Cliente</li>
+                        <li><span class="text-green-500 font-bold">✓</span> Gestão de Clientes</li>
+                        <li><span class="font-semibold">👥 Limite de 1 Utilizador</span></li>
+                    </ul>
+                    <a href="https://app.fazeresolve.com/register?plano=Essencial" class="mt-auto w-full bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors">Registar Agora</a>
+                </div>
+                <div class="border-2 border-indigo-600 rounded-lg p-6 flex flex-col relative h-full bg-white shadow-lg">
+                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div>
+                    <p class="text-center font-semibold text-yellow-500 mb-2">🎉 Oferta de Lançamento!</p>
+                    <h4 class="text-lg font-bold">Profissional</h4>
+                    <p class="text-4xl font-bold my-4">R$ 129<span class="text-lg font-medium text-gray-500">/mês</span></p>
+                    <ul class="space-y-3 text-gray-600 text-left mb-6 flex-grow">
+                        <li><span class="text-green-500 font-bold">✓</span> Tudo do Essencial</li>
+                        <li><span class="text-green-500 font-bold">✓</span> Gestão de Estoque</li>
+                        <li><span class="text-green-500 font-bold">✓</span> Agenda Inteligente (Google Calendar)</li>
+                        <li><span class="font-semibold">👥 Limite de 2 Utilizadores</span></li>
+                        <li class="text-sm">➕ R$ 29/mês por utilizador adicional</li>
+                    </ul>
+                    <a href="https://app.fazeresolve.com/register?plano=Profissional" class="mt-auto w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Registar Agora</a>
+                </div>
+                <div class="border rounded-lg p-6 flex flex-col h-full bg-white shadow-sm">
+                    <h4 class="text-lg font-bold">Premium</h4>
+                    <p class="text-4xl font-bold my-4">R$ 199<span class="text-lg font-medium text-gray-500">/mês</span></p>
+                    <ul class="space-y-3 text-gray-600 text-left mb-6 flex-grow">
+                        <li><span class="text-green-500 font-bold">✓</span> Tudo do Profissional</li>
+                        <li><span class="text-green-500 font-bold">✓</span> <span class="font-bold">Comunicação Mágica ✨</span></li>
+                        <li><span class="text-green-500 font-bold">✓</span> <span class="font-bold">Orçamentos Inteligentes ✨</span></li>
+                        <li><span class="text-green-500 font-bold">✓</span> Estoque Inteligente com IA</li>
+                        <li><span class="text-green-500 font-bold">✓</span> Automação WhatsApp 24/7</li>
+                        <li><span class="text-green-500 font-bold">✓</span> Mapa de Demandas & Clientes Valiosos</li>
+                        <li><span class="font-semibold">👥 Limite de 5 Utilizadores</span></li>
+                        <li class="text-sm">➕ R$ 19/mês por utilizador adicional</li>
+                    </ul>
+                    <a href="https://app.fazeresolve.com/register?plano=Premium" class="mt-auto w-full bg-gray-200 text-gray-800 font-semibold py-3 px-4 rounded-lg hover:bg-gray-300 transition-colors">Registar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-white py-16 md:py-20">
         <div class="container mx-auto px-6 max-w-3xl">
             <h3 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h3>
             <div class="space-y-4">
-                <div><h4 class="font-semibold">Preciso de conhecimento técnico para usar?</h4><p class="text-gray-600 mt-1">Não! O Faz & Resolve foi desenhado para ser intuitivo. Se você sabe usar o WhatsApp, sabe usar a nossa plataforma.</p></div>
-                <div class="border-t pt-4"><h4 class="font-semibold">Os meus dados estão seguros?</h4><p class="text-gray-600 mt-1">Sim. Usamos as melhores práticas de segurança e cloud computing para garantir que os dados da sua empresa e dos seus clientes estejam sempre protegidos.</p></div>
-                <div class="border-t pt-4"><h4 class="font-semibold">Como funciona o suporte?</h4><p class="text-gray-600 mt-1">Oferecemos suporte via e-mail e WhatsApp para todos os planos, com atendimento prioritário para os clientes do plano Premium.</p></div>
+                <div class="border-b pb-4">
+                    <h4 class="font-semibold text-lg">Preciso de conhecimento técnico para usar?</h4>
+                    <p class="text-gray-600 mt-1">Não! O Faz & Resolve foi desenhado para ser intuitivo. Se você sabe usar o WhatsApp, sabe usar a nossa plataforma.</p>
+                </div>
+                <div class="border-b pb-4">
+                    <h4 class="font-semibold text-lg">Os meus dados estão seguros?</h4>
+                    <p class="text-gray-600 mt-1">Sim. Usamos as melhores práticas de segurança e cloud computing para garantir que os dados da sua empresa e dos seus clientes estejam sempre protegidos.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg">Como funciona o suporte?</h4>
+                    <p class="text-gray-600 mt-1">Oferecemos suporte via e-mail e WhatsApp para todos os planos, com atendimento prioritário para os clientes do plano Premium.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="bg-white py-16 md:py-20">
+    <!-- Contact Section -->
+    <section id="contato" class="bg-gray-800 text-white py-16 md:py-20">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl font-bold">Interessado em ser um dos primeiros a usar?</h3>
-            <p class="text-gray-600 mt-2 mb-8">Entre em contato para saber mais sobre o nosso lançamento.</p>
-            <p class="text-lg font-semibold text-indigo-600 mb-4">15991499708</p>
-            <a href="https://wa.me/5515991499708" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-600 transition-colors">
-                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M13.545 2.455a9.455 9.455 0 00-13.09 13.09L0 20l4.455-1.455a9.455 9.455 0 0013.09-13.09A9.455 9.455 0 0013.545 2.455zM10 18a7.91 7.91 0 01-4.145-1.18l-.295-.175-3.085.955.975-3.01-.195-.305A7.91 7.91 0 1110 18zm2.47-5.9c-.27-.135-1.595-.785-1.845-.875-.25-.09-.435-.135-.615.135-.18.27-.695.875-.855 1.05-.16.18-.32.195-.59.06-.27-.135-1.14-.42-2.17-1.335-.81-.71-1.35-1.59-1.51-1.86s0-.405.12-.54c.105-.12.24-.315.36-.465.12-.15.165-.255.24-.42.075-.165.045-.315-.015-.45-.06-.135-.615-1.47-.84-2.01-.225-.525-.45-.45-.615-.45h-.54c-.18 0-.465.075-.705.345-.24.27-.93.9-1.125 2.19.015 1.29.96 2.52 1.095 2.7.135.18 1.86 2.955 4.5 4.125.615.285 1.11.45 1.485.57.645.21 1.23.18 1.695.105.51-.075 1.595-.645 1.815-1.275.225-.63.225-1.17.15-1.275-.075-.105-.255-.165-.525-.3z"></path></svg>
-                Chamar no WhatsApp
+            <h3 class="text-3xl font-bold">Pronto para transformar a gestão do seu negócio?</h3>
+            <p class="text-gray-300 mt-2 mb-8 max-w-xl mx-auto">Agende uma demonstração gratuita e sem compromisso. Vamos mostrar-lhe como o Faz & Resolve pode poupar o seu tempo e aumentar o seu lucro.</p>
+            <a href="https://wa.me/5515991499708" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-600 transition-colors shadow-lg">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M13.545 2.455a9.455 9.455 0 00-13.09 13.09L0 20l4.455-1.455a9.455 9.455 0 0013.09-13.09A9.455 9.455 0 0013.545 2.455zM10 18a7.91 7.91 0 01-4.145-1.18l-.295-.175-3.085.955.975-3.01-.195-.305A7.91 7.91 0 1110 18zm2.47-5.9c-.27-.135-1.595-.785-1.845-.875-.25-.09-.435-.135-.615.135-.18.27-.695.875-.855 1.05-.16.18-.32.195-.59.06-.27-.135-1.14-.42-2.17-1.335-.81-.71-1.35-1.59-1.51-1.86s0-.405.12-.54c.105-.12.24-.315.36-.465.12-.15.165-.255.24-.42.075-.165.045-.315-.015-.45-.06-.135-.615-1.47-.84-2.01-.225-.525-.45-.45-.615-.45h-.54c-.18 0-.465.075-.705.345-.24.27-.93.9-1.125 2.19.015 1.29.96 2.52 1.095 2.7.135.18 1.86 2.955 4.5 4.125.615.285 1.11.45 1.485.57.645.21 1.23.18 1.695.105.51-.075 1.595-.645 1.815-1.275.225-.63.225-1.17.15-1.275-.075-.105-.255-.165-.525-.3z"></path></svg>
+                Agendar Demonstração Gratuita
             </a>
         </div>
     </section>
 
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-4 text-center text-gray-400">
-            &copy; 2025 Faz & Resolve. Todos os direitos reservados.
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <div class="flex justify-center items-center space-x-4 mb-2">
+                 <p>&copy; 2025 Faz & Resolve. Todos os direitos reservados.</p>
+                 <span class="text-gray-600">|</span>
+                 <a href="privacidade.html" class="hover:text-white transition-colors">Política de Privacidade</a>
+            </div>
+            <p class="text-sm">CNPJ: 59.834.629/0001-80</p>
         </div>
     </footer>
+
+<script>
+    const generateButton = document.getElementById('generate-button');
+    const buttonText = document.getElementById('button-text');
+    const loadingSpinner = document.getElementById('loading-spinner');
+    const promptInput = document.getElementById('prompt-input');
+    const responseContainer = document.getElementById('response-container');
+    const geminiResponse = document.getElementById('gemini-response');
+    const errorMessage = document.getElementById('error-message');
+
+    generateButton.addEventListener('click', async () => {
+        const userQuery = promptInput.value.trim();
+        if (!userQuery) {
+            showError("Por favor, escreva o que deseja comunicar.");
+            return;
+        }
+
+        setLoading(true);
+        hideError();
+        
+        const apiKey = ""; // API key is handled by the environment
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+        const systemPrompt = `Você é um assistente de comunicação para prestadores de serviço brasileiros. Sua tarefa é reescrever a solicitação do usuário em uma mensagem curta, profissional e amigável para ser enviada a um cliente. Mantenha um tom positivo e eficiente. Responda apenas com a mensagem gerada, sem introduções ou explicações adicionais.`;
+
+        const payload = {
+            contents: [{ parts: [{ text: userQuery }] }],
+            systemInstruction: {
+                parts: [{ text: systemPrompt }]
+            },
+        };
+
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!response.ok) {
+                throw new Error(`Erro na API: ${response.statusText}`);
+            }
+
+            const result = await response.json();
+            const candidate = result.candidates?.[0];
+
+            if (candidate && candidate.content?.parts?.[0]?.text) {
+                const text = candidate.content.parts[0].text;
+                geminiResponse.textContent = text;
+                responseContainer.classList.remove('hidden');
+            } else {
+                 throw new Error("A resposta da API não contém o texto esperado.");
+            }
+
+        } catch (error) {
+            console.error('Erro ao chamar a API Gemini:', error);
+            showError("Ocorreu um erro ao gerar a mensagem. Tente novamente.");
+        } finally {
+            setLoading(false);
+        }
+    });
+    
+    function setLoading(isLoading) {
+        if (isLoading) {
+            buttonText.classList.add('hidden');
+            loadingSpinner.classList.remove('hidden');
+            generateButton.disabled = true;
+        } else {
+            buttonText.classList.remove('hidden');
+            loadingSpinner.classList.add('hidden');
+            generateButton.disabled = false;
+        }
+    }
+
+    function showError(message) {
+        errorMessage.textContent = message;
+        errorMessage.classList.remove('hidden');
+    }
+
+    function hideError() {
+        errorMessage.classList.add('hidden');
+    }
+</script>
 
 </body>
 </html>
