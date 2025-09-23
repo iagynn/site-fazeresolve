@@ -56,14 +56,14 @@
             width: 8px;
         }
         .mockup-scrollbar::-webkit-scrollbar-track {
-            background: #e2e8f0; /* bg-slate-200 */
+            background: #f1f5f9; /* bg-slate-100 */
         }
         .mockup-scrollbar::-webkit-scrollbar-thumb {
-            background: #94a3b8; /* bg-slate-400 */
+            background: #cbd5e1; /* bg-slate-300 */
             border-radius: 4px;
         }
         .mockup-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #64748b; /* bg-slate-500 */
+            background: #94a3b8; /* bg-slate-400 */
         }
     </style>
 </head>
@@ -72,10 +72,10 @@
     <!-- Header -->
     <header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center gap-2">
+            <a href="#" class="flex items-center gap-3">
                 <!-- LOGO -->
-               <img src="https://i.ibb.co/fdDhy6h7/18015-155-1.png" alt="Logo Faz & Resolve" class="h-10 w-auto">
-                <span class="font-bold text-xl text-white">Faz & Resolve</span>
+                <img src="https://i.ibb.co/fdDhy6h7/18015-155-1.png" alt="Logo Faz & Resolve" class="h-16 w-auto">
+                <span class="font-bold text-2xl text-white">Faz & Resolve</span>
             </a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#funcionalidades" class="font-semibold text-slate-300 hover:text-white transition-colors">Funcionalidades</a>
@@ -136,20 +136,20 @@
 
                     <!-- Dashboard Content Wrapper -->
                     <div class="h-[600px] overflow-y-auto mockup-scrollbar">
-                         <div class="p-4 md:p-8" style="background-color: #f1f5f9; color: #0f172a;">
+                         <div class="p-4 md:p-8" style="background-color: #f8fafc; color: #0f172a;">
                             <div class="max-w-screen-2xl mx-auto">
-                                <!-- Cabeçalho -->
+                                <!-- Cabeçalho do Dashboard -->
                                 <header class="flex flex-col md:flex-row justify-between md:items-center mb-8 gap-4">
                                     <div>
                                         <h1 class="text-3xl font-bold text-slate-800">Dashboard</h1>
                                         <p class="text-slate-500">Bem-vindo! Aqui está um resumo do seu negócio.</p>
                                     </div>
-                                    <div class="flex items-center gap-2">
+                                    <div class="flex items-center gap-3">
                                         <button class="bg-white border border-slate-300 text-slate-700 font-semibold px-4 py-2 rounded-lg shadow-sm hover:bg-slate-50 transition-colors">
                                             <i class="fas fa-calendar-alt mr-2 text-slate-400"></i>
                                             <span>Últimos 30 dias</span>
                                         </button>
-                                         <button class="bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg shadow-sm hover:bg-indigo-700 transition-colors">
+                                         <button class="bg-indigo-600 text-white font-bold px-4 py-2 rounded-lg shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 transition-all">
                                             <i class="fas fa-plus mr-2"></i>
                                             <span>Novo Serviço</span>
                                         </button>
@@ -157,204 +157,122 @@
                                 </header>
                         
                                 <!-- Grid Principal -->
-                                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         
-                                    <!-- Coluna Esquerda (Gráfico e Pendências) -->
-                                    <div class="lg:col-span-2 space-y-6">
+                                    <!-- Coluna Esquerda (Principal) -->
+                                    <div class="lg:col-span-2 space-y-8">
                                         <!-- Cards de Métricas -->
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                                            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
-                                                <div class="flex items-center justify-between mb-2">
-                                                    <h2 class="text-sm font-semibold text-slate-500">Faturamento</h2>
-                                                    <div class="w-10 h-10 flex items-center justify-center bg-blue-100 text-blue-600 rounded-lg">
-                                                        <i class="fas fa-dollar-sign"></i>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                            <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-blue-500">
+                                                <div class="flex items-center justify-between">
+                                                    <div>
+                                                        <p class="text-sm font-semibold text-slate-500">Faturamento (Mês)</p>
+                                                        <p class="text-3xl font-bold text-slate-800 mt-1">R$ 9.236,44</p>
                                                     </div>
+                                                    <div class="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full text-xl"><i class="fas fa-dollar-sign"></i></div>
                                                 </div>
-                                                <p class="text-3xl font-bold text-slate-800">R$ 9.236,44</p>
                                             </div>
-                                            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
-                                                <div class="flex items-center justify-between mb-2">
-                                                    <h2 class="text-sm font-semibold text-slate-500">Lucro</h2>
-                                                    <div class="w-10 h-10 flex items-center justify-center bg-green-100 text-green-600 rounded-lg">
-                                                        <i class="fas fa-arrow-trend-up"></i>
+                                            <div class="bg-white p-6 rounded-2xl shadow-md border-l-4 border-green-500">
+                                                <div class="flex items-center justify-between">
+                                                     <div>
+                                                        <p class="text-sm font-semibold text-slate-500">Lucro (Mês)</p>
+                                                        <p class="text-3xl font-bold text-slate-800 mt-1">R$ 7.936,44</p>
                                                     </div>
+                                                    <div class="w-12 h-12 flex items-center justify-center bg-green-100 text-green-500 rounded-full text-xl"><i class="fas fa-arrow-trend-up"></i></div>
                                                 </div>
-                                                <p class="text-3xl font-bold text-slate-800">R$ 7.936,44</p>
-                                            </div>
-                                            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
-                                                <div class="flex items-center justify-between mb-2">
-                                                    <h2 class="text-sm font-semibold text-slate-500">Novos Clientes</h2>
-                                                    <div class="w-10 h-10 flex items-center justify-center bg-orange-100 text-orange-600 rounded-lg">
-                                                        <i class="fas fa-user-plus"></i>
-                                                    </div>
-                                                </div>
-                                                <p class="text-3xl font-bold text-slate-800">3</p>
-                                            </div>
-                                            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
-                                                <div class="flex items-center justify-between mb-2">
-                                                    <h2 class="text-sm font-semibold text-slate-500">Pedidos Pendentes</h2>
-                                                     <div class="w-10 h-10 flex items-center justify-center bg-pink-100 text-pink-600 rounded-lg">
-                                                        <i class="fas fa-hourglass-half"></i>
-                                                    </div>
-                                                </div>
-                                                <p class="text-3xl font-bold text-slate-800">0</p>
                                             </div>
                                         </div>
                         
                                         <!-- Desempenho Financeiro -->
-                                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                                            <div class="flex justify-between items-center mb-4">
-                                                <h2 class="text-lg font-bold text-slate-800">Desempenho Financeiro</h2>
-                                                <div class="flex items-center gap-4 text-sm">
-                                                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-green-500"></div><span>Lucro</span></div>
-                                                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-blue-500"></div><span>Faturamento</span></div>
-                                                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-red-500"></div><span>Despesas</span></div>
+                                        <div class="bg-white p-6 rounded-2xl shadow-md">
+                                            <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-4">
+                                                <h2 class="text-xl font-bold text-slate-800">Desempenho Financeiro</h2>
+                                                <div class="flex items-center gap-4 text-sm mt-2 sm:mt-0">
+                                                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-green-400"></div><span>Lucro</span></div>
+                                                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-blue-400"></div><span>Faturamento</span></div>
+                                                    <div class="flex items-center gap-2"><div class="w-3 h-3 rounded-full bg-red-400"></div><span>Despesas</span></div>
                                                 </div>
                                             </div>
                                             <div class="w-full h-80 relative">
+                                                <!-- Eixo Y simulado -->
+                                                <div class="absolute -left-8 top-0 h-full text-xs text-slate-400 flex flex-col justify-between">
+                                                    <span>10k</span><span>8k</span><span>6k</span><span>4k</span><span>2k</span><span>0</span>
+                                                </div>
                                                 <svg class="w-full h-full" preserveAspectRatio="none">
                                                      <defs>
                                                         <linearGradient id="faturamentoGradient" x1="0" y1="0" x2="0" y2="1">
-                                                          <stop offset="5%" stop-color="#3b82f6" stop-opacity="0.4"/>
-                                                          <stop offset="95%" stop-color="#3b82f6" stop-opacity="0"/>
+                                                          <stop offset="5%" stop-color="#60a5fa" stop-opacity="0.5"/>
+                                                          <stop offset="95%" stop-color="#60a5fa" stop-opacity="0"/>
                                                         </linearGradient>
                                                       </defs>
                                                     <path d="M 0,320 L 200,320 350,320 500,320 650,280 800,20 1000,20 1000,320 Z" fill="url(#faturamentoGradient)"></path>
-                                                    <path d="M 0 310 C 250 310, 500 310, 750 280 S 850 60, 1000 60" stroke="#22c55e" fill="none" stroke-width="3"></path>
-                                                     <path d="M 0 320 C 100 320, 400 320, 600 320 S 800 250, 1000 250" stroke="#ef4444" fill="none" stroke-width="2" stroke-dasharray="4"></path>
+                                                    <path d="M 0 310 C 250 310, 500 310, 750 280 S 850 60, 1000 60" stroke="#4ade80" fill="none" stroke-width="3" stroke-linecap="round"></path>
+                                                     <path d="M 0 320 C 100 320, 400 320, 600 320 S 800 250, 1000 250" stroke="#f87171" fill="none" stroke-width="2" stroke-dasharray="5"></path>
+                                                     <!-- Pontos no gráfico de lucro -->
+                                                     <circle cx="1000" cy="60" r="5" fill="#4ade80" stroke="white" stroke-width="2"></circle>
                                                 </svg>
-                                            </div>
-                                        </div>
-                        
-                                        <!-- Pagamentos Pendentes -->
-                                         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-                                            <div class="p-5 bg-red-50 border-b border-red-200">
-                                                <h2 class="text-lg font-bold text-red-800">Pagamentos Pendentes</h2>
-                                                <p class="text-sm text-red-600">Valor Total Pendente: <span class="font-bold">R$ 12.738,00</span></p>
-                                            </div>
-                                            <div class="divide-y divide-slate-200">
-                                                 <div class="p-4 flex justify-between items-center hover:bg-slate-50">
-                                                    <div>
-                                                        <p class="font-semibold text-slate-700">Cliente Anônimo</p>
-                                                        <p class="text-sm text-slate-500">Pedido #0452 - Finalizado em 16/06/2025</p>
-                                                    </div>
-                                                    <p class="font-bold text-slate-800">R$ 658,00</p>
-                                                </div>
-                                                <div class="p-4 flex justify-between items-center hover:bg-slate-50">
-                                                    <div>
-                                                        <p class="font-semibold text-slate-700">iago</p>
-                                                        <p class="text-sm text-slate-500">Pedido #145334 - Finalizado em 23/09/2025</p>
-                                                    </div>
-                                                    <p class="font-bold text-slate-800">R$ 12.080,00</p>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
                         
                                     <!-- Coluna Direita (Listas e Resumos) -->
-                                    <div class="lg:col-span-1 space-y-6">
-                                         <!-- Agendamentos e Atenção -->
-                                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                                            <h2 class="text-lg font-bold text-slate-800 mb-4">Ações Rápidas</h2>
+                                    <div class="lg:col-span-1 space-y-8">
+                                        <!-- Ações Rápidas -->
+                                        <div class="bg-white p-6 rounded-2xl shadow-md">
+                                            <h2 class="text-xl font-bold text-slate-800 mb-4">Ações Rápidas</h2>
                                             <div class="space-y-4">
                                                 <div>
-                                                     <h3 class="font-semibold text-sm text-slate-500 mb-2">PRÓXIMOS AGENDAMENTOS</h3>
-                                                     <p class="text-slate-400 text-center py-4">Nenhum agendamento futuro.</p>
+                                                     <h3 class="text-sm font-bold text-slate-500 mb-2 tracking-wider">PRÓXIMOS AGENDAMENTOS</h3>
+                                                     <div class="space-y-3">
+                                                        <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg">
+                                                            <div class="w-10 h-10 flex-shrink-0 bg-indigo-100 text-indigo-600 rounded-lg flex flex-col items-center justify-center">
+                                                                <span class="text-xs font-bold">SET</span>
+                                                                <span class="font-bold">24</span>
+                                                            </div>
+                                                            <div>
+                                                                <p class="font-semibold text-slate-700">Manutenção de Ar Cond.</p>
+                                                                <p class="text-sm text-slate-500">Carlos Silva - 10:00</p>
+                                                            </div>
+                                                        </div>
+                                                     </div>
                                                 </div>
                                                 <div class="border-t border-slate-200 pt-4">
-                                                    <h3 class="font-semibold text-sm text-slate-500 mb-2">A PRECISAR DE ATENÇÃO</h3>
-                                                    <div class="flex justify-between items-center">
-                                                        <p class="font-semibold text-slate-700">Orçamento: iago</p>
-                                                        <span class="text-sm text-slate-500">23/09/2025</span>
+                                                    <h3 class="text-sm font-bold text-slate-500 mb-2 tracking-wider">A PRECISAR DE ATENÇÃO</h3>
+                                                    <div class="bg-amber-50 border border-amber-200 text-amber-800 p-3 rounded-lg flex items-center gap-3">
+                                                        <i class="fas fa-exclamation-triangle"></i>
+                                                        <div>
+                                                            <p class="font-semibold">Orçamento #152 pendente</p>
+                                                            <p class="text-sm">Cliente: Ana Pereira</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                         
                                         <!-- Top 5 Clientes -->
-                                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                                            <h2 class="text-lg font-bold text-slate-800 mb-4">Top 5 Clientes (por Faturamento)</h2>
-                                            <div class="space-y-3">
+                                        <div class="bg-white p-6 rounded-2xl shadow-md">
+                                            <h2 class="text-xl font-bold text-slate-800 mb-4">Top 5 Clientes</h2>
+                                            <div class="space-y-4">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">LF</div>
-                                                        <span class="font-semibold text-slate-700">Lucas Ferreira</span>
+                                                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">I</div>
+                                                        <span class="font-semibold text-slate-700">Iago</span>
                                                     </div>
                                                     <span class="font-bold text-slate-800">R$ 2.850,00</span>
                                                 </div>
-                                                <div class="flex items-center justify-between">
+                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold text-sm">MC</div>
-                                                        <span class="font-semibold text-slate-700">Arthur</span>
+                                                        <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold">J</div>
+                                                        <span class="font-semibold text-slate-700">Jade</span>
                                                     </div>
                                                     <span class="font-bold text-slate-800">R$ 2.130,00</span>
                                                 </div>
-                                                <div class="flex items-center justify-between">
+                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-8 h-8 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-sm">I</div>
-                                                        <span class="font-semibold text-slate-700">iago</span>
-                                                    </div>
-                                                    <span class="font-bold text-slate-800">R$ 1.980,00</span>
-                                                </div>
-                                                <div class="flex items-center justify-between">
-                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-sm">BA</div>
-                                                        <span class="font-semibold text-slate-700">Jade</span>
+                                                        <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">A</div>
+                                                        <span class="font-semibold text-slate-700">Arthur</span>
                                                     </div>
                                                     <span class="font-bold text-slate-800">R$ 1.540,00</span>
-                                                </div>
-                                                 <div class="flex items-center justify-between">
-                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-8 h-8 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center font-bold text-sm">RS</div>
-                                                        <span class="font-semibold text-slate-700">Rafael Souza</span>
-                                                    </div>
-                                                    <span class="font-bold text-slate-800">R$ 1.200,00</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                        
-                                        <!-- Serviços Mais Realizados -->
-                                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                                            <h2 class="text-lg font-bold text-slate-800 mb-4">Serviços Mais Realizados</h2>
-                                             <div class="space-y-3">
-                                                <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Instalação de Ar Condicionado</span>
-                                                    <span class="font-bold text-slate-500">8</span>
-                                                </div>
-                                                <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Manutenção Preventiva</span>
-                                                    <span class="font-bold text-slate-500">5</span>
-                                                </div>
-                                                <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Reparo Elétrico Residencial</span>
-                                                    <span class="font-bold text-slate-500">4</span>
-                                                </div>
-                                                <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Instalação de Luminárias</span>
-                                                    <span class="font-bold text-slate-500">3</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                        
-                                        <!-- Regiões Mais Populares -->
-                                        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
-                                            <h2 class="text-lg font-bold text-slate-800 mb-4">Regiões Mais Populares</h2>
-                                             <div class="space-y-3">
-                                                <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Jardim Paulistano, Sorocaba</span>
-                                                    <span class="font-bold text-slate-500">12 serviços</span>
-                                                </div>
-                                                 <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Campolim, Sorocaba</span>
-                                                    <span class="font-bold text-slate-500">9 serviços</span>
-                                                </div>
-                                                 <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Centro, Votorantim</span>
-                                                    <span class="font-bold text-slate-500">7 serviços</span>
-                                                </div>
-                                                 <div class="flex justify-between items-center">
-                                                    <span class="font-semibold text-slate-700">Parque Bela Vista, Votorantim</span>
-                                                    <span class="font-bold text-slate-500">5 serviços</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -616,8 +534,12 @@
     <!-- Footer -->
     <footer class="border-t border-slate-800">
         <div class="container mx-auto px-6 py-8 text-center text-slate-400">
-            <p>&copy; 2025 Faz & Resolve. Todos os direitos reservados.</p>
-            <p class="text-sm mt-2">CNPJ: 59.834.629/0001-80</p>
+             <div class="flex justify-center items-center space-x-4 mb-4">
+                <a href="privacidade.html" class="hover:text-white transition-colors">Política de Privacidade</a>
+                <span class="text-slate-600">|</span>
+                <p>&copy; 2025 Faz & Resolve. Todos os direitos reservados.</p>
+            </div>
+            <p class="text-sm">CNPJ: 59.834.629/0001-80</p>
         </div>
     </footer>
 
@@ -677,3 +599,4 @@
 
 </body>
 </html>
+
