@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faz & Resolve - O Sistema de Gestão Completo para Prestadores de Serviço</title>
-    <meta name="description" content="Centralize pedidos, clientes e finanças. O Faz & Resolve automatiza suas tarefas para que você possa focar no crescimento do seu negócio de serviços.">
+    <title>Faz & Resolve - Gestão Inteligente para Negócios de Serviço</title>
+    <meta name="description" content="O sistema completo para prestadores de serviço que desejam automatizar tarefas, organizar finanças e dobrar o lucro sem dobrar o trabalho.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,17 +13,23 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* bg-slate-900 */
+            color: #cbd5e1; /* text-slate-300 */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         .gradient-text {
-            background: linear-gradient(to right, #6366f1, #a5b4fc);
+            background: linear-gradient(90deg, #818cf8, #a78bfa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .glass-header {
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+        .section-bg {
+            background-color: #1e293b; /* bg-slate-800 */
         }
         .fade-in-section {
             opacity: 0;
@@ -34,226 +40,234 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Estilo para o accordion do FAQ */
+        details > summary {
+            list-style: none;
+            cursor: pointer;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .fa-chevron-down {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body>
 
+    <!-- Header -->
     <header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-2">
-                <img src="logo-faz-resolve.png" alt="Logo Faz & Resolve" class="h-10 w-auto">
-                <span class="font-bold text-xl text-slate-800">Faz & Resolve</span>
+                <!-- LOGO -->
+                <img src="https://i.ibb.co/L6g0Z1c/18015-155-1.png" alt="Logo Faz & Resolve" class="h-10 w-auto">
+                <span class="font-bold text-xl text-white">Faz & Resolve</span>
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#funcionalidades" class="font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Funcionalidades</a>
-                <a href="#precos" class="font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Preços</a>
-                <a href="#faq" class="font-semibold text-slate-600 hover:text-indigo-600 transition-colors">FAQ</a>
+                <a href="#funcionalidades" class="font-semibold text-slate-300 hover:text-white transition-colors">Funcionalidades</a>
+                <a href="#precos" class="font-semibold text-slate-300 hover:text-white transition-colors">Preços</a>
+                <a href="#faq" class="font-semibold text-slate-300 hover:text-white transition-colors">FAQ</a>
             </nav>
-            <div class="hidden md:flex items-center space-x-2">
-                <a href="https://app.fazeresolve.com/login" class="font-bold text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-50 transition-colors">
-                    Login
-                </a>
-                <a href="https://app.fazeresolve.com/subscribe" class="bg-indigo-600 text-white font-bold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-500/50">
+            <div class="hidden md:flex items-center">
+                <a href="https://app.fazeresolve.com/subscribe" class="bg-indigo-600 text-white font-bold px-6 py-2.5 rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50">
                     Comece Agora
                 </a>
             </div>
-             <button id="mobile-menu-button" class="md:hidden text-slate-800">
+            <button id="mobile-menu-button" class="md:hidden text-white">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
-         <div id="mobile-menu" class="hidden md:hidden bg-white">
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-header">
             <nav class="flex flex-col items-center space-y-4 py-4">
-                <a href="#funcionalidades" class="font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Funcionalidades</a>
-                <a href="#precos" class="font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Preços</a>
-                <a href="#faq" class="font-semibold text-slate-600 hover:text-indigo-600 transition-colors">FAQ</a>
-                <a href="https://app.fazeresolve.com/login" class="font-bold text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-50 transition-colors">Login</a>
-                <a href="https://app.fazeresolve.com/subscribe" class="w-1/2 text-center bg-indigo-600 text-white font-bold px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-all shadow-lg hover:shadow-indigo-500/50">Comece Agora</a>
+                <a href="#funcionalidades" class="font-semibold text-slate-300 hover:text-white transition-colors">Funcionalidades</a>
+                <a href="#precos" class="font-semibold text-slate-300 hover:text-white transition-colors">Preços</a>
+                <a href="#faq" class="font-semibold text-slate-300 hover:text-white transition-colors">FAQ</a>
+                <a href="https://app.fazeresolve.com/subscribe" class="w-1/2 text-center bg-indigo-600 text-white font-bold px-5 py-2.5 rounded-lg hover:bg-indigo-700">Comece Agora</a>
             </nav>
         </div>
     </header>
 
-    <main class="bg-slate-900">
-        <div class="container mx-auto px-6 pt-20 pb-24 text-center text-white relative overflow-hidden">
-            <div class="absolute -top-20 -left-40 w-96 h-96 bg-indigo-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20"></div>
-            <div class="absolute -bottom-20 -right-40 w-96 h-96 bg-purple-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20"></div>
+    <!-- Hero Section -->
+    <main>
+        <div class="container mx-auto px-6 pt-20 pb-24 text-center relative overflow-hidden">
+            <!-- Background Glows -->
+            <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
 
-            <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight">
-                Dobre o seu lucro, <span class="gradient-text">sem dobrar o seu trabalho.</span>
+            <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight text-white">
+                A Gestão do seu Negócio, <span class="gradient-text">Finalmente Simplificada.</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-                Centralize pedidos, clientes e finanças. O Faz & Resolve automatiza as suas tarefas para que você possa focar no que realmente importa: o crescimento do seu negócio.
+                Chega de planilhas e cadernos. Automatize tarefas, organize suas finanças e foque no que você faz de melhor.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-                <a href="https://app.fazeresolve.com/subscribe" class="w-full sm:w-auto bg-indigo-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-indigo-500 transition-all shadow-2xl hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
-                    Comece Agora <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#funcionalidades" class="w-full sm:w-auto bg-white/10 backdrop-blur-sm text-white font-bold px-8 py-4 rounded-lg hover:bg-white/20 transition-colors">
-                    Ver Funcionalidades
+            <div class="flex justify-center items-center mb-6">
+                <a href="https://app.fazeresolve.com/subscribe" class="bg-indigo-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-500/50 flex items-center justify-center gap-2">
+                    Quero Organizar Meu Negócio <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <p class="text-sm text-slate-400">Junte-se a mais de 100 profissionais que já estão transformando seus negócios.</p>
+            <p class="text-sm text-slate-400">Junte-se a mais de 100 profissionais de sucesso.</p>
 
-            <div class="mt-16 mx-auto max-w-5xl shadow-2xl shadow-indigo-500/20 rounded-xl">
-                 <img src="painel-visao-geral.png" alt="Painel de Visão Geral do sistema Faz & Resolve" class="rounded-xl w-full h-auto">
+            <div class="mt-16 mx-auto max-w-5xl">
+                 <img src="https://placehold.co/1000x563/0f172a/a5b4fc?text=Mockup+do+Sistema" alt="Mockup do sistema Faz & Resolve em um notebook" class="rounded-xl w-full h-auto border border-slate-700 shadow-2xl shadow-indigo-500/10">
             </div>
         </div>
     </main>
 
-    <section id="funcionalidades" class="bg-white py-20 md:py-28">
+    <!-- Features Section -->
+    <section id="funcionalidades" class="py-20 md:py-28 section-bg">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 fade-in-section">
-                <span class="text-indigo-600 font-semibold">Tudo em um só lugar</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800 mt-2">Uma plataforma, todas as ferramentas.</h2>
-                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Funcionalidades criadas para quem vive do seu ofício e não tem tempo a perder com tarefas manuais e desorganizadas.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Tudo que você precisa em um só lugar</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Ferramentas desenhadas para a realidade do prestador de serviço brasileiro.</p>
             </div>
             
-            <div class="flex flex-col md:flex-row items-center gap-12 mb-20 fade-in-section">
+            <!-- Feature 1 -->
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 mb-20 fade-in-section">
                 <div class="md:w-1/2">
-                    <div class="bg-indigo-100 text-indigo-600 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-chart-line text-2xl"></i></div>
-                    <h3 class="text-2xl font-bold mb-2">Visão Geral e Financeiro Inteligente</h3>
-                    <p class="text-slate-600">Tenha uma visão clara da saúde do seu negócio com um dashboard completo. Acompanhe faturamento, lucro, novos clientes e despesas em tempo real. Gere relatórios e tome decisões baseadas em dados concretos.</p>
+                    <div class="bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-chart-line text-2xl"></i></div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Financeiro e Visão Geral</h3>
+                    <p class="text-slate-300">Acompanhe faturamento, lucro e despesas em tempo real. Tenha uma visão clara da saúde financeira do seu negócio e tome decisões mais inteligentes com relatórios simplificados.</p>
                 </div>
                 <div class="md:w-1/2">
-                     <img src="painel-visao-geral.png" alt="Dashboard financeiro do sistema" class="rounded-lg shadow-xl">
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20 fade-in-section">
-                <div class="md:w-1/2">
-                    <div class="bg-green-100 text-green-600 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-boxes-stacked text-2xl"></i></div>
-                    <h3 class="text-2xl font-bold mb-2">Gestão de Estoque Simplificada</h3>
-                    <p class="text-slate-600">Controle seus materiais e peças com facilidade. O sistema informa quando um item está com estoque baixo e deduz automaticamente a quantidade usada em cada serviço, evitando compras de última hora e atrasos.</p>
-                </div>
-                <div class="md:w-1/2">
-                     <img src="painel-gestao-estoque.png" alt="Tela de gestão de estoque" class="rounded-lg shadow-xl">
+                     <img src="https://placehold.co/600x400/0f172a/a5b4fc?text=Painel+Financeiro" alt="Placeholder da tela de visão geral e financeiro" class="rounded-lg shadow-xl border border-slate-700">
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center gap-12 fade-in-section">
+            <!-- Feature 2 -->
+             <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-20 mb-20 fade-in-section">
                 <div class="md:w-1/2">
-                    <div class="bg-purple-100 text-purple-600 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-map-location-dot text-2xl"></i></div>
-                    <h3 class="text-2xl font-bold mb-2">Mapa de Mercado e Visibilidade</h3>
-                    <p class="text-slate-600">Visualize em um mapa onde seus clientes estão concentrados. Esta ferramenta poderosa ajuda a identificar bairros de maior atuação, permitindo otimizar rotas e focar seus esforços de marketing de forma estratégica.</p>
+                    <div class="bg-green-500/10 border border-green-500/30 text-green-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-boxes-stacked text-2xl"></i></div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Controle de Estoque Inteligente</h3>
+                    <p class="text-slate-300">Saiba exatamente quais materiais você tem e receba alertas quando o estoque estiver baixo. O sistema deduz os itens usados em cada serviço, evitando compras emergenciais e atrasos.</p>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="painel-mapa-mercado.png" alt="Mapa de atividade de clientes" class="rounded-lg shadow-xl">
+                     <img src="https://placehold.co/600x400/0f172a/a5b4fc?text=Gest%C3%A3o+de+Estoque" alt="Placeholder da tela de gestão de estoque" class="rounded-lg shadow-xl border border-slate-700">
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 fade-in-section">
+                <div class="md:w-1/2">
+                    <div class="bg-purple-500/10 border border-purple-500/30 text-purple-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-map-location-dot text-2xl"></i></div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Mapa de Atuação</h3>
+                    <p class="text-slate-300">Descubra onde seus clientes estão concentrados e identifique as regiões mais lucrativas. Otimize suas rotas e direcione seu marketing para os lugares certos, aumentando sua eficiência.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/0f172a/a5b4fc?text=Mapa+de+Mercado" alt="Placeholder da tela do mapa de mercado" class="rounded-lg shadow-xl border border-slate-700">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="precos" class="bg-slate-50 py-20 md:py-28">
+    <!-- Pricing Section -->
+    <section id="precos" class="py-20 md:py-28">
         <div class="container mx-auto px-6 text-center fade-in-section">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800">Planos transparentes para o seu crescimento</h2>
-            <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Escolha o plano que melhor se adapta ao seu momento. Sem taxas escondidas e sem surpresas.</p>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-white">Um plano para cada fase do seu negócio</h2>
+            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Comece hoje. Cancele quando quiser. Simples e transparente.</p>
             
             <div class="mt-10 flex justify-center items-center gap-4">
-                <span class="font-semibold" id="monthly-label">Mensal</span>
+                <span class="font-semibold text-white" id="monthly-label">Mensal</span>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" value="" id="billing-toggle" class="sr-only peer">
-                    <div class="w-14 h-7 bg-slate-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                    <div class="w-14 h-7 bg-slate-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
                 </label>
-                <span class="font-semibold text-slate-400" id="yearly-label">Anual <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2 py-1 rounded-full">Economize 2 meses</span></span>
+                <span class="font-semibold text-slate-400" id="yearly-label">Anual <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2 py-1 rounded-full">Economize 2 meses</span></span>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mt-12 text-left">
-                <div class="border rounded-2xl p-8 flex flex-col h-full bg-white shadow-sm transition-all hover:border-slate-300">
-                    <h3 class="text-lg font-bold text-indigo-600">Essencial</h3>
-                    <p class="text-slate-500 mt-2">Para quem está começando.</p>
-                    <p class="text-4xl font-extrabold my-6 price-tag" data-monthly="79" data-yearly="790">R$ 79<span class="text-lg font-medium text-slate-500">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe" class="w-full border border-indigo-600 text-indigo-600 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-50 text-center transition-colors">Começar Agora</a>
-                    <ul class="space-y-3 text-slate-600 mt-6 flex-grow">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Gestão de Serviços e Orçamentos</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Cadastro de Clientes</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Controle Financeiro (Básico)</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Limite de <span class="font-bold">1 Usuário</span></span></li>
+                <!-- Planos -->
+                <div class="border border-slate-700 rounded-2xl p-8 flex flex-col h-full bg-slate-800/50 transition-all hover:border-slate-500">
+                    <h3 class="text-lg font-bold text-indigo-400">Essencial</h3>
+                    <p class="text-slate-400 mt-2">O começo da organização.</p>
+                    <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="79" data-yearly="790">R$ 79<span class="text-lg font-medium text-slate-400">/mês</span></p>
+                    <a href="https://app.fazeresolve.com/subscribe" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
+                    <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Gestão de Serviços</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Cadastro de Clientes</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Controle Financeiro Básico</span></li>
                     </ul>
                 </div>
-                <div class="border-2 border-indigo-600 rounded-2xl p-8 flex flex-col relative h-full bg-white shadow-2xl">
-                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div>
-                    <h3 class="text-lg font-bold text-indigo-600">Profissional</h3>
-                    <p class="text-slate-500 mt-2">Para negócios em crescimento.</p>
-                    <p class="text-4xl font-extrabold my-6 price-tag" data-monthly="129" data-yearly="1290">R$ 129<span class="text-lg font-medium text-slate-500">/mês</span></p>
+                <div class="border-2 border-indigo-500 rounded-2xl p-8 flex flex-col relative h-full bg-slate-800 shadow-2xl shadow-indigo-500/20">
+                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div>
+                    <h3 class="text-lg font-bold text-indigo-400">Profissional</h3>
+                    <p class="text-slate-400 mt-2">Para acelerar o crescimento.</p>
+                    <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="129" data-yearly="1290">R$ 129<span class="text-lg font-medium text-slate-400">/mês</span></p>
                     <a href="https://app.fazeresolve.com/subscribe" class="w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors text-center">Começar Agora</a>
-                    <ul class="space-y-3 text-slate-600 mt-6 flex-grow">
-                          <li class="flex items-start"><i class="fas fa-check-circle text-indigo-500 mr-2 mt-1"></i> <span class="font-bold">Tudo do Essencial, mais:</span></li>
-                          <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Agenda Inteligente</span></li>
-                          <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Gestão de Estoque</span></li>
-                          <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Relatórios Financeiros</span></li>
-                           <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Limite de <span class="font-bold">3 Usuários</span></span></li>
+                    <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
+                          <li class="flex items-start"><i class="fas fa-check-circle text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Essencial, mais:</span></li>
+                          <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Agenda Inteligente</span></li>
+                          <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Gestão de Estoque</span></li>
+                          <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Relatórios Avançados</span></li>
                     </ul>
                 </div>
-                <div class="border rounded-2xl p-8 flex flex-col h-full bg-white shadow-sm transition-all hover:border-slate-300">
-                    <h3 class="text-lg font-bold text-indigo-600">Premium IA</h3>
-                    <p class="text-slate-500 mt-2">Para escalar com inteligência.</p>
-                    <p class="text-4xl font-extrabold my-6 price-tag" data-monthly="199" data-yearly="1990">R$ 199<span class="text-lg font-medium text-slate-500">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe" class="w-full border border-indigo-600 text-indigo-600 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-50 text-center transition-colors">Começar Agora</a>
-                    <ul class="space-y-3 text-slate-600 mt-6 flex-grow">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-indigo-500 mr-2 mt-1"></i> <span class="font-bold">Tudo do Profissional, mais:</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Automação com WhatsApp</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Pesquisas de Satisfação</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Portal do Cliente</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Mapa de Mercado</span></li>
-                        <li class="flex items-start"><i class="fas fa-star text-yellow-400 mr-2 mt-1"></i> <span class="font-bold">Assistente Virtual (Em Breve)</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mr-2 mt-1"></i> <span>Limite de <span class="font-bold">5 Usuários</span></span></li>
+                <div class="border border-slate-700 rounded-2xl p-8 flex flex-col h-full bg-slate-800/50 transition-all hover:border-slate-500">
+                    <h3 class="text-lg font-bold text-indigo-400">Premium IA</h3>
+                    <p class="text-slate-400 mt-2">Para escalar com automação.</p>
+                    <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="199" data-yearly="1990">R$ 199<span class="text-lg font-medium text-slate-400">/mês</span></p>
+                    <a href="https://app.fazeresolve.com/subscribe" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
+                    <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
+                        <li class="flex items-start"><i class="fas fa-check-circle text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Profissional, mais:</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Automação com WhatsApp</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Portal do Cliente</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Mapa de Mercado</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
     
-    <section id="faq" class="bg-white py-20 md:py-28">
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-28 section-bg">
         <div class="container mx-auto px-6 max-w-4xl fade-in-section">
              <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-800">Perguntas Frequentes</h2>
-                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Tirando suas dúvidas para você começar com total confiança.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Dúvidas? Nós respondemos.</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">As perguntas mais comuns sobre o Faz & Resolve.</p>
             </div>
-            <div class="space-y-8">
-                <div>
-                    <h3 class="font-bold text-lg">Preciso instalar algum programa no meu computador?</h3>
-                    <p class="text-slate-600 mt-2">Não! O Faz&Resolve é 100% online. Você pode acessá-lo de qualquer dispositivo com internet (computador, tablet ou celular) através do seu navegador, sem precisar baixar ou instalar nada.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg">Meus dados estão seguros na plataforma?</h3>
-                    <p class="text-slate-600 mt-2">Sim. A segurança é nossa prioridade. Usamos as melhores práticas de segurança digital, incluindo criptografia de dados e servidores robustos, para garantir que suas informações e as de seus clientes estejam sempre protegidas.</p>
-                </div>
-                 <div>
-                    <h3 class="font-bold text-lg">Existe contrato de fidelidade? Posso cancelar quando quiser?</h3>
-                    <p class="text-slate-600 mt-2">Não há contrato de fidelidade. Você pode cancelar sua assinatura a qualquer momento, sem burocracia ou taxas de cancelamento. A gestão é sua, e a liberdade também.</p>
-                </div>
-                 <div>
-                    <h3 class="font-bold text-lg">Como funciona a integração com o WhatsApp?</h3>
-                    <p class="text-slate-600 mt-2">Nossa automação com o WhatsApp permite enviar lembretes de agendamento, notificações de cobrança e pesquisas de satisfação diretamente para o cliente, de forma automática. Isso economiza seu tempo e profissionaliza sua comunicação.</p>
-                </div>
+            <div class="space-y-4">
+                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                        Preciso instalar algo no computador?
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </summary>
+                    <p class="text-slate-300 mt-4">Não! O Faz&Resolve é 100% online. Você acessa de qualquer dispositivo com internet (computador, tablet ou celular) pelo navegador, sem instalar nada.</p>
+                </details>
+                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                        Meus dados estão seguros?
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </summary>
+                    <p class="text-slate-300 mt-4">Sim, a segurança é nossa prioridade máxima. Usamos criptografia de ponta e as melhores práticas do mercado para garantir que suas informações estejam sempre protegidas.</p>
+                </details>
+                 <details class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                        Tem contrato de fidelidade?
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </summary>
+                    <p class="text-slate-300 mt-4">Não há fidelidade. Você tem total liberdade para cancelar sua assinatura quando quiser, sem multas ou burocracia. Simples e direto.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="bg-slate-900">
-         <div class="container mx-auto px-6 py-20 text-center text-white relative overflow-hidden">
-            <h2 class="text-3xl md:text-4xl font-black mb-4 leading-tight">Pronto para profissionalizar sua gestão?</h2>
-            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-               Chega de cadernos e planilhas confusas. Organize seu negócio, impressione seus clientes e veja seu lucro crescer.
+    <!-- Final CTA -->
+    <section id="contato" class="py-20 md:py-28">
+         <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-black mb-4 leading-tight text-white">Pronto para transformar a gestão do seu negócio?</h2>
+            <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-8">
+               Deixe a desorganização no passado. Comece a usar o Faz & Resolve hoje e veja seu negócio crescer de forma inteligente.
             </p>
-             <a href="https://app.fazeresolve.com/subscribe" class="inline-block bg-indigo-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-indigo-500 transition-all shadow-2xl hover:shadow-indigo-500/50">
-                Quero Crescer Meu Negócio Agora
+             <a href="https://app.fazeresolve.com/subscribe" class="inline-block bg-indigo-600 text-white font-bold px-10 py-4 rounded-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-500/50">
+                Quero Crescer Meu Negócio
             </a>
         </div>
     </section>
 
-
-    <footer class="bg-slate-900 text-white border-t border-slate-800">
-        <div class="container mx-auto px-6 py-12 text-center text-slate-400">
-              <a href="#" class="flex items-center justify-center gap-2 mb-6">
-                <img src="logo-faz-resolve.png" alt="Logo Faz & Resolve" class="h-10 w-auto">
-                <span class="font-bold text-xl text-white">Faz & Resolve</span>
-            </a>
-            <div class="flex justify-center items-center space-x-4 mb-4">
-                <a href="privacidade.html" class="hover:text-white transition-colors">Política de Privacidade</a>
-                <span class="text-slate-600">|</span>
-                <p>&copy; 2025 Faz & Resolve. Todos os direitos reservados.</p>
-            </div>
-            <p class="text-sm">CNPJ: 59.834.629/0001-80</p>
+    <!-- Footer -->
+    <footer class="border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+            <p>&copy; 2025 Faz & Resolve. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">CNPJ: 59.834.629/0001-80</p>
         </div>
     </footer>
 
@@ -280,9 +294,9 @@
     const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 10) {
-            header.classList.add('glass-header', 'shadow-md');
+            header.classList.add('glass-header');
         } else {
-            header.classList.remove('glass-header', 'shadow-md');
+            header.classList.remove('glass-header');
         }
     });
 
@@ -295,15 +309,17 @@
     toggle.addEventListener('change', () => {
         const isYearly = toggle.checked;
         monthlyLabel.classList.toggle('text-slate-400', isYearly);
+        monthlyLabel.classList.toggle('text-white', !isYearly);
         yearlyLabel.classList.toggle('text-slate-400', !isYearly);
+        yearlyLabel.classList.toggle('text-white', isYearly);
 
         priceTags.forEach(tag => {
             const monthlyPrice = tag.dataset.monthly;
             const yearlyPrice = tag.dataset.yearly;
             if (isYearly) {
-                tag.innerHTML = `R$ ${yearlyPrice}<span class="text-lg font-medium text-slate-500">/ano</span>`;
+                tag.innerHTML = `R$ ${yearlyPrice}<span class="text-lg font-medium text-slate-400">/ano</span>`;
             } else {
-                tag.innerHTML = `R$ ${monthlyPrice}<span class="text-lg font-medium text-slate-500">/mês</span>`;
+                tag.innerHTML = `R$ ${monthlyPrice}<span class="text-lg font-medium text-slate-400">/mês</span>`;
             }
         });
     });
