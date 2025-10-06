@@ -81,8 +81,12 @@
     <header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
-                <!-- LOGO -->
-                <img src="https://i.ibb.co/fdDhy6h7/18015-155-1.png" alt="Logo Faz & Resolve" class="h-16 w-auto">
+                <!-- LOGO SVG -->
+                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29.8213 18.5732C29.8213 17.5126 29.563 16.5123 29.0463 15.5724L32.8113 12.639C34.004 14.639 34.6425 16.9806 34.6425 19.4554C34.6425 24.8468 31.8198 29.5549 27.4298 32.1408L24.955 28.5351C27.9963 26.7538 29.8213 22.9888 29.8213 18.5732Z" fill="#818cf8"/>
+                    <path d="M10.1787 21.4268C10.1787 22.4874 10.437 23.4877 10.9537 24.4276L7.18872 27.361C5.99602 25.361 5.35752 23.0194 5.35752 20.5446C5.35752 15.1532 8.18022 10.4451 12.5702 7.85921L15.045 11.4649C12.0037 13.2462 10.1787 17.0112 10.1787 21.4268Z" fill="#818cf8"/>
+                    <path d="M22.3831 16.9805V5.35742H17.6164V16.9805H6.17871V21.7471H17.6164V33.3701H22.3831V21.7471H33.8208V16.9805H22.3831Z" fill="#a78bfa"/>
+                </svg>
                 <span class="font-bold text-2xl text-white">Faz & Resolve</span>
             </a>
             <nav class="hidden md:flex space-x-8">
@@ -130,12 +134,12 @@
                     Quero Organizar Meu Negócio <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <p class="text-sm text-slate-400">Junte-se a mais de 100 profissionais de sucesso.</p>
+            <p class="text-sm text-slate-400">Junte-se a centenas de profissionais de sucesso.</p>
 
             <!-- Dashboard Mockup Section -->
             <div class="mt-16 mx-auto max-w-6xl">
                  <div class="bg-slate-800/50 border border-slate-700 rounded-xl shadow-2xl shadow-indigo-500/10 overflow-hidden">
-                    <!-- Mockup Header -->
+                     <!-- Mockup Header -->
                     <div class="bg-slate-900/80 backdrop-blur-sm p-3 flex items-center gap-2 border-b border-slate-700">
                         <div class="w-3 h-3 rounded-full bg-red-500"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -175,7 +179,7 @@
                                                 <div class="flex items-center justify-between">
                                                     <div>
                                                         <p class="text-sm font-semibold text-slate-500">Faturamento (Mês)</p>
-                                                        <p class="text-3xl font-bold text-slate-800 mt-1">R$ 9.236,44</p>
+                                                        <p class="text-3xl font-bold text-slate-800 mt-1">R$ 12.345</p>
                                                     </div>
                                                     <div class="w-12 h-12 flex items-center justify-center bg-blue-100 text-blue-500 rounded-full text-xl"><i class="fas fa-dollar-sign"></i></div>
                                                 </div>
@@ -184,7 +188,7 @@
                                                 <div class="flex items-center justify-between">
                                                      <div>
                                                         <p class="text-sm font-semibold text-slate-500">Lucro (Mês)</p>
-                                                        <p class="text-3xl font-bold text-slate-800 mt-1">R$ 7.936,44</p>
+                                                        <p class="text-3xl font-bold text-slate-800 mt-1">R$ 4.567</p>
                                                     </div>
                                                     <div class="w-12 h-12 flex items-center justify-center bg-green-100 text-green-500 rounded-full text-xl"><i class="fas fa-arrow-trend-up"></i></div>
                                                 </div>
@@ -202,22 +206,17 @@
                                                 </div>
                                             </div>
                                             <div class="w-full h-80 relative">
-                                                <!-- Eixo Y simulado -->
-                                                <div class="absolute -left-8 top-0 h-full text-xs text-slate-400 flex flex-col justify-between">
-                                                    <span>10k</span><span>8k</span><span>6k</span><span>4k</span><span>2k</span><span>0</span>
-                                                </div>
-                                                <svg class="w-full h-full" preserveAspectRatio="none">
-                                                     <defs>
+                                                <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 500 200">
+                                                    <defs>
                                                         <linearGradient id="faturamentoGradient" x1="0" y1="0" x2="0" y2="1">
-                                                          <stop offset="5%" stop-color="#60a5fa" stop-opacity="0.5"/>
-                                                          <stop offset="95%" stop-color="#60a5fa" stop-opacity="0"/>
+                                                            <stop offset="5%" stop-color="#60a5fa" stop-opacity="0.5"/>
+                                                            <stop offset="95%" stop-color="#60a5fa" stop-opacity="0"/>
                                                         </linearGradient>
-                                                      </defs>
-                                                    <path d="M 0,320 L 200,320 350,320 500,320 650,280 800,20 1000,20 1000,320 Z" fill="url(#faturamentoGradient)"></path>
-                                                    <path d="M 0 310 C 250 310, 500 310, 750 280 S 850 60, 1000 60" stroke="#4ade80" fill="none" stroke-width="3" stroke-linecap="round"></path>
-                                                     <path d="M 0 320 C 100 320, 400 320, 600 320 S 800 250, 1000 250" stroke="#f87171" fill="none" stroke-width="2" stroke-dasharray="5"></path>
-                                                     <!-- Pontos no gráfico de lucro -->
-                                                     <circle cx="1000" cy="60" r="5" fill="#4ade80" stroke="white" stroke-width="2"></circle>
+                                                    </defs>
+                                                    <path d="M 0 180 C 100 150, 200 80, 300 100 S 400 120, 500 90 L 500 200 Z" fill="url(#faturamentoGradient)"></path>
+                                                    <path d="M 0 180 C 100 150, 200 80, 300 100 S 400 120, 500 90" stroke="#60a5fa" fill="none" stroke-width="3" stroke-linecap="round"></path>
+                                                    <path d="M 0 190 C 100 170, 200 110, 300 130 S 400 150, 500 120" stroke="#4ade80" fill="none" stroke-width="3" stroke-linecap="round"></path>
+                                                    <path d="M 0 195 C 100 190, 200 180, 300 185 S 400 170, 500 175" stroke="#f87171" fill="none" stroke-width="2" stroke-dasharray="5"></path>
                                                 </svg>
                                             </div>
                                         </div>
@@ -230,19 +229,17 @@
                                             <h2 class="text-xl font-bold text-slate-800 mb-4">Ações Rápidas</h2>
                                             <div class="space-y-4">
                                                 <div>
-                                                     <h3 class="text-sm font-bold text-slate-500 mb-2 tracking-wider">PRÓXIMOS AGENDAMENTOS</h3>
-                                                     <div class="space-y-3">
-                                                        <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg">
-                                                            <div class="w-10 h-10 flex-shrink-0 bg-indigo-100 text-indigo-600 rounded-lg flex flex-col items-center justify-center">
-                                                                <span class="text-xs font-bold">SET</span>
-                                                                <span class="font-bold">24</span>
-                                                            </div>
-                                                            <div>
-                                                                <p class="font-semibold text-slate-700">Manutenção de Ar Cond.</p>
-                                                                <p class="text-sm text-slate-500">Carlos Silva - 10:00</p>
-                                                            </div>
+                                                    <h3 class="text-sm font-bold text-slate-500 mb-2 tracking-wider">PRÓXIMOS AGENDAMENTOS</h3>
+                                                    <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-lg">
+                                                        <div class="w-10 h-10 flex-shrink-0 bg-indigo-100 text-indigo-600 rounded-lg flex flex-col items-center justify-center">
+                                                            <span class="text-xs font-bold">OUT</span>
+                                                            <span class="font-bold">24</span>
                                                         </div>
-                                                     </div>
+                                                        <div>
+                                                            <p class="font-semibold text-slate-700">Manutenção de Ar Cond.</p>
+                                                            <p class="text-sm text-slate-500">Carlos Silva - 10:00</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="border-t border-slate-200 pt-4">
                                                     <h3 class="text-sm font-bold text-slate-500 mb-2 tracking-wider">A PRECISAR DE ATENÇÃO</h3>
@@ -257,30 +254,23 @@
                                             </div>
                                         </div>
                         
-                                        <!-- Top 5 Clientes -->
+                                        <!-- Clientes Recentes -->
                                         <div class="bg-white p-6 rounded-2xl shadow-md">
-                                            <h2 class="text-xl font-bold text-slate-800 mb-4">Top 5 Clientes</h2>
+                                            <h2 class="text-xl font-bold text-slate-800 mb-4">Clientes Recentes</h2>
                                             <div class="space-y-4">
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">I</div>
-                                                        <span class="font-semibold text-slate-700">Iago</span>
+                                                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">CS</div>
+                                                        <span class="font-semibold text-slate-700">Carlos Silva</span>
                                                     </div>
-                                                    <span class="font-bold text-slate-800">R$ 2.850,00</span>
+                                                    <span class="text-sm text-slate-500">há 2 horas</span>
                                                 </div>
-                                                 <div class="flex items-center justify-between">
+                                                <div class="flex items-center justify-between">
                                                     <div class="flex items-center gap-3">
-                                                        <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold">J</div>
-                                                        <span class="font-semibold text-slate-700">Jade</span>
+                                                        <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold">AP</div>
+                                                        <span class="font-semibold text-slate-700">Ana Pereira</span>
                                                     </div>
-                                                    <span class="font-bold text-slate-800">R$ 2.130,00</span>
-                                                </div>
-                                                 <div class="flex items-center justify-between">
-                                                    <div class="flex items-center gap-3">
-                                                        <div class="w-10 h-10 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center font-bold">A</div>
-                                                        <span class="font-semibold text-slate-700">Arthur</span>
-                                                    </div>
-                                                    <span class="font-bold text-slate-800">R$ 1.540,00</span>
+                                                    <span class="text-sm text-slate-500">ontem</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -302,136 +292,38 @@
                 <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Ferramentas desenhadas para a realidade do prestador de serviço brasileiro.</p>
             </div>
             
-            <!-- Feature 1: Financeiro -->
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 mb-20 fade-in-section">
-                <div class="md:w-1/2">
-                    <div class="bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-chart-line text-2xl"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Gestão Financeira Completa</h3>
-                    <p class="text-slate-300">Acompanhe faturamento bruto, despesas, lucro líquido e margem de lucro com clareza. Registre todas as transações, categorize suas movimentações e tenha uma visão clara da saúde financeira do seu negócio.</p>
+            <!-- Grid de Features -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section">
+                    <div class="bg-indigo-500/10 text-indigo-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-calendar-alt text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Agenda Inteligente</h3>
+                    <p class="text-slate-400">Organize seus agendamentos, evite conflitos de horário e visualize sua semana com clareza.</p>
                 </div>
-                <div class="md:w-1/2 text-slate-800 bg-slate-50 rounded-xl p-6 border border-slate-200/20 shadow-lg">
-                    <h3 class="font-bold text-lg mb-4">Histórico de Transações</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-4 text-center">
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Faturamento Bruto</p>
-                            <p class="font-bold text-lg text-slate-800">R$ 9.236,44</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Total de Despesas</p>
-                            <p class="font-bold text-lg text-red-600">R$ 1.300,00</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Lucro Líquido</p>
-                            <p class="font-bold text-lg text-green-600">R$ 7.936,44</p>
-                        </div>
-                         <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Margem de Lucro</p>
-                            <p class="font-bold text-lg text-slate-800">85.9%</p>
-                        </div>
-                    </div>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm">
-                            <div class="flex items-center gap-3"><i class="fas fa-arrow-up text-green-500"></i><span>Serviço</span></div>
-                            <span class="font-semibold text-green-600">+ R$ 6.000,00</span>
-                        </div>
-                        <div class="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm">
-                            <div class="flex items-center gap-3"><i class="fas fa-arrow-down text-red-500"></i><span>Compra de materiais</span></div>
-                            <span class="font-semibold text-red-600">- R$ 1.000,00</span>
-                        </div>
-                        <div class="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm">
-                           <div class="flex items-center gap-3"><i class="fas fa-arrow-up text-green-500"></i><span>Recebimento pedido #64de8</span></div>
-                           <span class="font-semibold text-green-600">+ R$ 2.000,00</span>
-                        </div>
-                    </div>
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 150ms;">
+                    <div class="bg-green-500/10 text-green-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-chart-line text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Controle Financeiro</h3>
+                    <p class="text-slate-400">Acompanhe faturamento, despesas e lucro. Saiba exatamente para onde vai seu dinheiro.</p>
                 </div>
-            </div>
-
-            <!-- Feature 2: Estoque -->
-             <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-20 mb-20 fade-in-section">
-                <div class="md:w-1/2">
-                    <div class="bg-green-500/10 border border-green-500/30 text-green-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-boxes-stacked text-2xl"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Controle de Estoque Inteligente</h3>
-                    <p class="text-slate-300">Saiba exatamente quais materiais você tem e receba alertas quando o estoque estiver baixo. O sistema deduz os itens usados em cada serviço, evitando compras emergenciais e atrasos.</p>
+                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 300ms;">
+                    <div class="bg-purple-500/10 text-purple-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-users text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Gestão de Clientes</h3>
+                    <p class="text-slate-400">Tenha o histórico de cada cliente na palma da mão, melhorando seu atendimento.</p>
                 </div>
-                <div class="md:w-1/2 text-slate-800 bg-slate-50 rounded-xl p-6 border border-slate-200/20 shadow-lg">
-                    <h3 class="font-bold text-lg mb-4">Itens em Estoque</h3>
-                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4 text-center">
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Valor Total do Estoque</p>
-                            <p class="font-bold text-lg text-slate-800">R$ 4.050,00</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Itens Distintos</p>
-                            <p class="font-bold text-lg text-slate-800">3</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-lg shadow-sm border-2 border-red-500">
-                            <p class="text-xs font-semibold text-slate-500">Itens Abaixo do Mínimo</p>
-                            <p class="font-bold text-lg text-red-600">2</p>
-                        </div>
-                    </div>
-                     <div class="space-y-2 text-sm">
-                        <div class="grid grid-cols-4 gap-4 items-center bg-white p-3 rounded-lg shadow-sm font-semibold">
-                            <span>Produto</span>
-                            <span class="text-center">Status</span>
-                            <span class="text-center">Qtd.</span>
-                            <span class="text-right">Custo Un.</span>
-                        </div>
-                        <div class="grid grid-cols-4 gap-4 items-center bg-white p-3 rounded-lg shadow-sm">
-                            <span>Couro</span>
-                            <div class="text-center"><span class="text-xs font-semibold bg-red-100 text-red-800 px-2 py-1 rounded-full">Estoque Baixo</span></div>
-                            <span class="text-center">4</span>
-                            <span class="text-right">R$ 80,00</span>
-                        </div>
-                         <div class="grid grid-cols-4 gap-4 items-center bg-white p-3 rounded-lg shadow-sm">
-                            <span>Parafusadeira</span>
-                            <div class="text-center"><span class="text-xs font-semibold bg-red-100 text-red-800 px-2 py-1 rounded-full">Estoque Baixo</span></div>
-                            <span class="text-center">2</span>
-                            <span class="text-right">R$ 250,00</span>
-                        </div>
-                         <div class="grid grid-cols-4 gap-4 items-center bg-white p-3 rounded-lg shadow-sm">
-                            <span>Parafuso</span>
-                            <div class="text-center"><span class="text-xs font-semibold bg-green-100 text-green-800 px-2 py-1 rounded-full">Em Estoque</span></div>
-                            <span class="text-center">17</span>
-                            <span class="text-right">R$ 190,00</span>
-                        </div>
-                    </div>
+                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 450ms;">
+                    <div class="bg-amber-500/10 text-amber-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-boxes-stacked text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Controle de Estoque</h3>
+                    <p class="text-slate-400">Gerencie materiais e peças, receba alertas de estoque baixo e nunca mais atrase um serviço.</p>
                 </div>
-            </div>
-
-            <!-- Feature 3: Mercado -->
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 fade-in-section">
-                <div class="md:w-1/2">
-                    <div class="bg-purple-500/10 border border-purple-500/30 text-purple-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-map-location-dot text-2xl"></i></div>
-                    <h3 class="text-2xl font-bold mb-3 text-white">Visibilidade de Mercado</h3>
-                    <p class="text-slate-300">Descubra onde seus clientes estão concentrados e identifique as regiões mais lucrativas. Otimize suas rotas e direcione seu marketing para os lugares certos, aumentando sua eficiência.</p>
+                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 600ms;">
+                    <div class="bg-sky-500/10 text-sky-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-file-invoice-dollar text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Orçamentos Profissionais</h3>
+                    <p class="text-slate-400">Crie e envie orçamentos detalhados em minutos, aumentando suas chances de fechar negócio.</p>
                 </div>
-                 <div class="md:w-1/2 text-slate-800 bg-slate-50 rounded-xl p-6 border border-slate-200/20 shadow-lg">
-                     <h3 class="font-bold text-lg mb-4">Mapa de Atividade</h3>
-                      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4 text-center">
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Total de Clientes</p>
-                            <p class="font-bold text-lg text-slate-800">152</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Cidades Atendidas</p>
-                            <p class="font-bold text-lg text-slate-800">4</p>
-                        </div>
-                        <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Ticket Médio</p>
-                            <p class="font-bold text-lg text-slate-800">R$ 345,50</p>
-                        </div>
-                         <div class="bg-white p-3 rounded-lg shadow-sm">
-                            <p class="text-xs font-semibold text-slate-500">Principal Serviço</p>
-                            <p class="font-bold text-sm text-slate-800">Inst. Ar Cond.</p>
-                        </div>
-                    </div>
-                    <div class="bg-slate-200 rounded-lg h-48 flex items-center justify-center relative">
-                        <i class="fas fa-map-marked-alt text-6xl text-slate-400"></i>
-                         <div class="absolute" style="top: 40%; left: 55%;">
-                            <i class="fas fa-map-pin text-red-500 text-3xl transform -translate-x-1/2 -translate-y-full"></i>
-                        </div>
-                    </div>
-                 </div>
+                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 750ms;">
+                    <div class="bg-rose-500/10 text-rose-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-chart-pie text-2xl"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Relatórios Inteligentes</h3>
+                    <p class="text-slate-400">Tome decisões baseadas em dados com relatórios de faturamento, serviços mais rentáveis e mais.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -448,45 +340,49 @@
                     <input type="checkbox" value="" id="billing-toggle" class="sr-only peer">
                     <div class="w-14 h-7 bg-slate-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
                 </label>
-                <span class="font-semibold text-slate-400" id="yearly-label">Anual <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2 py-1 rounded-full">Economize 2 meses</span></span>
+                <span class="font-semibold text-slate-400" id="yearly-label">Anual <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2 py-1 rounded-full">Economize 20%</span></span>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mt-12 text-left">
-                <!-- Planos -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12 text-left">
+                <!-- Plano Essencial -->
                 <div class="border border-slate-700 rounded-2xl p-8 flex flex-col h-full bg-slate-800/50 transition-all hover:border-slate-500">
                     <h3 class="text-lg font-bold text-indigo-400">Essencial</h3>
                     <p class="text-slate-400 mt-2">O começo da organização.</p>
                     <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="79" data-yearly="790">R$ 79<span class="text-lg font-medium text-slate-400">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
+                    <a href="https://app.fazeresolve.com/subscribe/essential" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
                     <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Gestão de Serviços</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Cadastro de Clientes</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Controle Financeiro Básico</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Gestão de Clientes e Serviços</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Agenda de Serviços</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Orçamentos e Pedidos</span></li>
+                         <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>1 Usuário</span></li>
                     </ul>
                 </div>
+                <!-- Plano Profissional -->
                 <div class="border-2 border-indigo-500 rounded-2xl p-8 flex flex-col relative h-full bg-slate-800 shadow-2xl shadow-indigo-500/20">
                     <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div>
                     <h3 class="text-lg font-bold text-indigo-400">Profissional</h3>
                     <p class="text-slate-400 mt-2">Para acelerar o crescimento.</p>
                     <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="129" data-yearly="1290">R$ 129<span class="text-lg font-medium text-slate-400">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe" class="w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors text-center">Começar Agora</a>
+                    <a href="https://app.fazeresolve.com/subscribe/professional" class="w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors text-center">Começar Agora</a>
                     <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
-                          <li class="flex items-start"><i class="fas fa-check-circle text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Essencial, mais:</span></li>
-                          <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Agenda Inteligente</span></li>
-                          <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Gestão de Estoque</span></li>
-                          <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Relatórios Avançados</span></li>
+                          <li class="flex items-start"><i class="fas fa-star text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Essencial, mais:</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Controle Financeiro Completo</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Relatórios de Desempenho</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Gestão de Estoque</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Até 2 Usuários</span></li>
                     </ul>
                 </div>
+                <!-- Plano Premium -->
                 <div class="border border-slate-700 rounded-2xl p-8 flex flex-col h-full bg-slate-800/50 transition-all hover:border-slate-500">
-                    <h3 class="text-lg font-bold text-indigo-400">Premium IA</h3>
+                    <h3 class="text-lg font-bold text-indigo-400">Premium</h3>
                     <p class="text-slate-400 mt-2">Para escalar com automação.</p>
                     <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="199" data-yearly="1990">R$ 199<span class="text-lg font-medium text-slate-400">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
+                    <a href="https://app.fazeresolve.com/subscribe/premium" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
                     <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Profissional, mais:</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Automação com WhatsApp</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Portal do Cliente</span></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-400 mr-2 mt-1"></i> <span>Mapa de Mercado</span></li>
+                        <li class="flex items-start"><i class="fas fa-star text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Profissional, mais:</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Controle de Estoque com IA</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Mapa de Demanda (Analytics)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Até 5 Usuários</span></li>
                     </ul>
                 </div>
             </div>
@@ -501,24 +397,24 @@
                 <p class="text-slate-400 mt-4 max-w-2xl mx-auto">As perguntas mais comuns sobre o Faz & Resolve.</p>
             </div>
             <div class="space-y-4">
-                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6 group">
                     <summary class="flex justify-between items-center font-bold text-lg text-white">
                         Preciso instalar algo no computador?
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <i class="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
                     </summary>
                     <p class="text-slate-300 mt-4">Não! O Faz&Resolve é 100% online. Você acessa de qualquer dispositivo com internet (computador, tablet ou celular) pelo navegador, sem instalar nada.</p>
                 </details>
-                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6 group">
                     <summary class="flex justify-between items-center font-bold text-lg text-white">
                         Meus dados estão seguros?
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <i class="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
                     </summary>
                     <p class="text-slate-300 mt-4">Sim, a segurança é nossa prioridade máxima. Usamos criptografia de ponta e as melhores práticas do mercado para garantir que suas informações estejam sempre protegidas.</p>
                 </details>
-                 <details class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+                 <details class="bg-slate-800 border border-slate-700 rounded-lg p-6 group">
                     <summary class="flex justify-between items-center font-bold text-lg text-white">
                         Tem contrato de fidelidade?
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                        <i class="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
                     </summary>
                     <p class="text-slate-300 mt-4">Não há fidelidade. Você tem total liberdade para cancelar sua assinatura quando quiser, sem multas ou burocracia. Simples e direto.</p>
                 </details>
@@ -531,7 +427,7 @@
          <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-black mb-4 leading-tight text-white">Pronto para transformar a gestão do seu negócio?</h2>
             <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-8">
-               Deixe a desorganização no passado. Comece a usar o Faz & Resolve hoje e veja seu negócio crescer de forma inteligente.
+              Deixe a desorganização no passado. Comece a usar o Faz & Resolve hoje e veja seu negócio crescer de forma inteligente.
             </p>
              <a href="https://app.fazeresolve.com/subscribe" class="inline-block bg-indigo-600 text-white font-bold px-10 py-4 rounded-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-500/50">
                  Quero Crescer Meu Negócio
@@ -612,4 +508,3 @@
 
 </body>
 </html>
-
