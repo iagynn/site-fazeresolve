@@ -13,57 +13,19 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* bg-slate-900 */
-            color: #cbd5e1; /* text-slate-300 */
+            background-color: #ffffff; /* White background */
+            color: #1e3a8a; /* Dark Blue text */
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        .gradient-text {
-            background: linear-gradient(90deg, #818cf8, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .primary-blue {
+            color: #2563eb; /* Primary Blue */
         }
-        .glass-header {
-            background-color: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        .bg-primary-blue {
+            background-color: #2563eb; /* Primary Blue */
         }
-        .section-bg {
-            background-color: #1e293b; /* bg-slate-800 */
-        }
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Estilo para o accordion do FAQ */
-        details > summary {
-            list-style: none;
-            cursor: pointer;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary .fa-chevron-down {
-            transform: rotate(180deg);
-        }
-        /* Custom scrollbar for mockup */
-        .mockup-scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
-        .mockup-scrollbar::-webkit-scrollbar-track {
-            background: #f1f5f9; /* bg-slate-100 */
-        }
-        .mockup-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1; /* bg-slate-300 */
-            border-radius: 4px;
-        }
-        .mockup-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; /* bg-slate-400 */
+        .border-primary-blue {
+            border-color: #2563eb; /* Primary Blue */
         }
         .whatsapp-button {
             animation: pulse 2s infinite;
@@ -78,76 +40,65 @@
 <body>
 
     <!-- Header -->
-    <header id="main-header" class="sticky top-0 z-50 transition-all duration-300">
+    <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 bg-white shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
-                <!-- LOGO SVG -->
-               <a href="#" class="flex items-center gap-3">
-             <img src="https://imgur.com/YXPtR81" alt="Logo Faz & Resolve" class="h-10 w-auto">
-               <span class="font-bold text-2xl text-white">Faz & Resolve</span>
-            </a>
-                <span class="font-bold text-2xl text-white">Faz & Resolve</span>
+             <img src="https://i.imgur.com/YXPtR81.png" alt="Logo Faz & Resolve" class="h-10 w-auto">
+               <span class="font-bold text-2xl text-slate-800">Faz & Resolve</span>
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#funcionalidades" class="font-semibold text-slate-300 hover:text-white transition-colors">Funcionalidades</a>
-                <a href="#precos" class="font-semibold text-slate-300 hover:text-white transition-colors">Preços</a>
-                <a href="#faq" class="font-semibold text-slate-300 hover:text-white transition-colors">FAQ</a>
+                <a href="#funcionalidades" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">Funcionalidades</a>
+                <a href="#precos" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">Preços</a>
+                <a href="#faq" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">FAQ</a>
             </nav>
             <div class="hidden md:flex items-center space-x-4">
-                <a href="https://app.fazeresolve.com/login" class="font-semibold text-slate-300 hover:text-white transition-colors">Login</a>
-                <a href="https://app.fazeresolve.com/subscribe" class="bg-indigo-600 text-white font-bold px-6 py-2.5 rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50">
+                <a href="https://app.fazeresolve.com/login" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">Login</a>
+                <a href="https://app.fazeresolve.com/subscribe" class="bg-primary-blue text-white font-bold px-6 py-2.5 rounded-lg hover:bg-blue-700 transition-all">
                     Comece Agora
                 </a>
             </div>
-            <button id="mobile-menu-button" class="md:hidden text-white">
+            <button id="mobile-menu-button" class="md:hidden text-slate-800">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
          <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden glass-header">
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
             <nav class="flex flex-col items-center space-y-5 py-5">
-                <a href="#funcionalidades" class="font-semibold text-slate-300 hover:text-white transition-colors">Funcionalidades</a>
-                <a href="#precos" class="font-semibold text-slate-300 hover:text-white transition-colors">Preços</a>
-                <a href="#faq" class="font-semibold text-slate-300 hover:text-white transition-colors">FAQ</a>
-                <a href="https://app.fazeresolve.com/login" class="font-semibold text-slate-300 hover:text-white transition-colors">Login</a>
-                <a href="https://app.fazeresolve.com/subscribe" class="w-1/2 text-center bg-indigo-600 text-white font-bold px-5 py-2.5 rounded-lg hover:bg-indigo-700">Comece Agora</a>
+                <a href="#funcionalidades" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">Funcionalidades</a>
+                <a href="#precos" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">Preços</a>
+                <a href="#faq" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">FAQ</a>
+                <a href="https://app.fazeresolve.com/login" class="font-semibold text-slate-600 hover:text-primary-blue transition-colors">Login</a>
+                <a href="https://app.fazeresolve.com/subscribe" class="w-1/2 text-center bg-primary-blue text-white font-bold px-5 py-2.5 rounded-lg hover:bg-blue-700">Comece Agora</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <main>
-        <div class="container mx-auto px-6 pt-20 pb-24 text-center relative overflow-hidden">
-            <!-- Background Glows -->
-            <div class="absolute top-0 left-0 w-96 h-96 bg-indigo-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-pulse"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full mix-blend-lighten filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
-
-            <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight text-white">
-                A Gestão do seu Negócio, <span class="gradient-text">Finalmente Simplificada.</span>
+    <main class="bg-white">
+        <section class="container mx-auto px-6 py-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4 leading-tight">
+                Seu negócio organizado. <br> <span class="text-primary-blue">Sua operação no controle.</span>
             </h1>
-            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-                Chega de planilhas e cadernos. Automatize tarefas, organize suas finanças e foque no que você faz de melhor.
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Um sistema de gestão para o controle financeiro da sua empresa em um único lugar.
             </p>
-            <div class="flex justify-center items-center mb-6">
-                <a href="https://app.fazeresolve.com/subscribe" class="bg-indigo-600 text-white font-bold px-8 py-4 rounded-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-500/50 flex items-center justify-center gap-2">
-                    Quero Organizar Meu Negócio <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <p class="text-sm text-slate-400">Junte-se a centenas de profissionais de sucesso.</p>
-
+            <a href="https://app.fazeresolve.com/subscribe" class="bg-primary-blue text-white font-bold px-8 py-4 rounded-lg hover:bg-blue-700 transition-all shadow-lg">
+                Teste Grátis
+            </a>
+            
             <!-- Dashboard Mockup Section -->
             <div class="mt-16 mx-auto max-w-6xl">
-                 <div class="bg-slate-800/50 border border-slate-700 rounded-xl shadow-2xl shadow-indigo-500/10 overflow-hidden">
+                 <div class="bg-white border border-slate-200 rounded-xl shadow-2xl overflow-hidden">
                      <!-- Mockup Header -->
-                    <div class="bg-slate-900/80 backdrop-blur-sm p-3 flex items-center gap-2 border-b border-slate-700">
+                    <div class="bg-slate-100 p-3 flex items-center gap-2 border-b border-slate-200">
                         <div class="w-3 h-3 rounded-full bg-red-500"></div>
                         <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                         <div class="w-3 h-3 rounded-full bg-green-500"></div>
                     </div>
 
                     <!-- Dashboard Content Wrapper -->
-                    <div class="h-[600px] overflow-y-auto mockup-scrollbar">
-                         <div class="p-4 md:p-8" style="background-color: #f8fafc; color: #0f172a;">
+                    <div class="h-[600px] overflow-y-auto">
+                         <div class="p-4 md:p-8">
                             <div class="max-w-screen-2xl mx-auto">
                                 <!-- Cabeçalho do Dashboard -->
                                 <header class="flex flex-col md:flex-row justify-between md:items-center mb-8 gap-4">
@@ -160,7 +111,7 @@
                                             <i class="fas fa-calendar-alt mr-2 text-slate-400"></i>
                                             <span>Últimos 30 dias</span>
                                         </button>
-                                         <button class="bg-indigo-600 text-white font-bold px-4 py-2 rounded-lg shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 transition-all">
+                                         <button class="bg-primary-blue text-white font-bold px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-all">
                                             <i class="fas fa-plus mr-2"></i>
                                             <span>Novo Serviço</span>
                                         </button>
@@ -267,7 +218,7 @@
                                                 <div class="flex items-center justify-between">
                                                     <div class="flex items-center gap-3">
                                                         <div class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center font-bold">AP</div>
-                                                        <span class="font-semibold text-slate-700">Ana Pereira</span>
+                                                        <span class="font-semibold text-slate-700">Jade</span>
                                                     </div>
                                                     <span class="text-sm text-slate-500">ontem</span>
                                                 </div>
@@ -280,108 +231,116 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <!-- Features Section -->
-    <section id="funcionalidades" class="py-20 md:py-28 section-bg">
+    <section id="funcionalidades" class="py-20 md:py-28 bg-slate-50">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in-section">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-2">Tudo que você precisa em um só lugar</h2>
-                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Ferramentas desenhadas para a realidade do prestador de serviço brasileiro.</p>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2">Problemas que resolvemos</h2>
+                <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Diga adeus às planilhas e à desorganização. O Faz & Resolve foi criado para simplificar sua vida.</p>
             </div>
             
-            <!-- Grid de Features -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section">
-                    <div class="bg-indigo-500/10 text-indigo-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-calendar-alt text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Agenda Inteligente</h3>
-                    <p class="text-slate-400">Organize seus agendamentos, evite conflitos de horário e visualize sua semana com clareza.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="text-primary-blue h-12 w-12 rounded-xl flex items-center justify-center mb-4 mx-auto text-3xl"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Dificuldade em cobrar clientes</h3>
+                    <p class="text-slate-600">Envie lembretes de pagamento automáticos e facilite o recebimento com links de pagamento para Pix e boleto.</p>
                 </div>
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 150ms;">
-                    <div class="bg-green-500/10 text-green-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-chart-line text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Controle Financeiro</h3>
-                    <p class="text-slate-400">Acompanhe faturamento, despesas e lucro. Saiba exatamente para onde vai seu dinheiro.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="text-primary-blue h-12 w-12 rounded-xl flex items-center justify-center mb-4 mx-auto text-3xl"><i class="fas fa-book"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Falta de controle financeiro</h3>
+                    <p class="text-slate-600">Acompanhe suas contas a pagar e a receber em um só lugar e tenha uma visão clara do seu fluxo de caixa.</p>
                 </div>
-                <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 300ms;">
-                    <div class="bg-purple-500/10 text-purple-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-users text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Gestão de Clientes</h3>
-                    <p class="text-slate-400">Tenha o histórico de cada cliente na palma da mão, melhorando seu atendimento.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-md">
+                    <div class="text-primary-blue h-12 w-12 rounded-xl flex items-center justify-center mb-4 mx-auto text-3xl"><i class="fas fa-calendar-times"></i></div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Agenda desorganizada</h3>
+                    <p class="text-slate-600">Gerencie seus compromissos, evite conflitos de horário e envie lembretes de agendamento para seus clientes.</p>
                 </div>
-                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 450ms;">
-                    <div class="bg-amber-500/10 text-amber-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-boxes-stacked text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Controle de Estoque</h3>
-                    <p class="text-slate-400">Gerencie materiais e peças, receba alertas de estoque baixo e nunca mais atrase um serviço.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Menos planilha, mais história pra contar!</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
+                <div class="bg-slate-50 p-8 rounded-2xl">
+                    <p class="text-slate-600 mb-4">"Aumentou o faturamento em mais de 300% em menos de um ano e meio."</p>
+                    <p class="font-bold text-slate-900">Rafaella Sales</p>
+                    <p class="text-sm text-slate-500">Aclima</p>
                 </div>
-                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 600ms;">
-                    <div class="bg-sky-500/10 text-sky-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-file-invoice-dollar text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Orçamentos Profissionais</h3>
-                    <p class="text-slate-400">Crie e envie orçamentos detalhados em minutos, aumentando suas chances de fechar negócio.</p>
+                <div class="bg-slate-50 p-8 rounded-2xl">
+                    <p class="text-slate-600 mb-4">"Resolvemos toda parte de Gestão Financeira que a gente buscava melhorar na empresa."</p>
+                    <p class="font-bold text-slate-900">Caetano Lipiani</p>
+                    <p class="text-sm text-slate-500">Alle Tecnologia</p>
                 </div>
-                 <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 fade-in-section" style="transition-delay: 750ms;">
-                    <div class="bg-rose-500/10 text-rose-400 h-12 w-12 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-chart-pie text-2xl"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Relatórios Inteligentes</h3>
-                    <p class="text-slate-400">Tome decisões baseadas em dados com relatórios de faturamento, serviços mais rentáveis e mais.</p>
+                <div class="bg-slate-50 p-8 rounded-2xl">
+                    <p class="text-slate-600 mb-4">"Consigo acessar o sistema de qualquer lugar de forma rápida."</p>
+                    <p class="font-bold text-slate-900">Jhennifer Gomes</p>
+                    <p class="text-sm text-slate-500">Rastreadores Goman</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="precos" class="py-20 md:py-28">
-        <div class="container mx-auto px-6 text-center fade-in-section">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white">Um plano para cada fase do seu negócio</h2>
-            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Comece hoje. Cancele quando quiser. Simples e transparente.</p>
+    <section id="precos" class="py-20 md:py-28 bg-slate-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Um plano para cada fase do seu negócio</h2>
+            <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Comece hoje. Cancele quando quiser. Simples e transparente.</p>
             
             <div class="mt-10 flex justify-center items-center gap-4">
-                <span class="font-semibold text-white" id="monthly-label">Mensal</span>
+                <span class="font-semibold text-slate-900" id="monthly-label">Mensal</span>
                 <label class="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" value="" id="billing-toggle" class="sr-only peer">
-                    <div class="w-14 h-7 bg-slate-700 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                    <div class="w-14 h-7 bg-slate-300 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-blue"></div>
                 </label>
-                <span class="font-semibold text-slate-400" id="yearly-label">Anual <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2 py-1 rounded-full">Economize 20%</span></span>
+                <span class="font-semibold text-slate-500" id="yearly-label">Anual <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-2 py-1 rounded-full">Economize 20%</span></span>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12 text-left">
                 <!-- Plano Essencial -->
-                <div class="border border-slate-700 rounded-2xl p-8 flex flex-col h-full bg-slate-800/50 transition-all hover:border-slate-500">
-                    <h3 class="text-lg font-bold text-indigo-400">Essencial</h3>
-                    <p class="text-slate-400 mt-2">O começo da organização.</p>
-                    <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="79" data-yearly="790">R$ 79<span class="text-lg font-medium text-slate-400">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe/essential" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
-                    <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
-                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Gestão de Clientes e Serviços</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Agenda de Serviços</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Orçamentos e Pedidos</span></li>
-                         <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>1 Usuário</span></li>
+                <div class="border border-slate-200 rounded-2xl p-8 flex flex-col h-full bg-white transition-all hover:shadow-lg">
+                    <h3 class="text-lg font-bold text-primary-blue">Essencial</h3>
+                    <p class="text-slate-500 mt-2">O começo da organização.</p>
+                    <p class="text-4xl text-slate-900 font-extrabold my-6 price-tag" data-monthly="79" data-yearly="790">R$ 79<span class="text-lg font-medium text-slate-500">/mês</span></p>
+                    <a href="https://app.fazeresolve.com/subscribe/essential" class="w-full border border-primary-blue text-primary-blue font-semibold py-3 px-4 rounded-lg hover:bg-primary-blue hover:text-white text-center transition-colors">Começar Agora</a>
+                    <ul class="space-y-3 text-slate-600 mt-6 flex-grow">
+                        <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Gestão de Clientes e Serviços</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Agenda de Serviços</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Orçamentos e Pedidos</span></li>
+                         <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>1 Usuário</span></li>
                     </ul>
                 </div>
                 <!-- Plano Profissional -->
-                <div class="border-2 border-indigo-500 rounded-2xl p-8 flex flex-col relative h-full bg-slate-800 shadow-2xl shadow-indigo-500/20">
-                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div>
-                    <h3 class="text-lg font-bold text-indigo-400">Profissional</h3>
-                    <p class="text-slate-400 mt-2">Para acelerar o crescimento.</p>
-                    <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="129" data-yearly="1290">R$ 129<span class="text-lg font-medium text-slate-400">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe/professional" class="w-full bg-indigo-600 text-white font-semibold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-colors text-center">Começar Agora</a>
-                    <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
-                          <li class="flex items-start"><i class="fas fa-star text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Essencial, mais:</span></li>
-                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Controle Financeiro Completo</span></li>
-                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Relatórios de Desempenho</span></li>
-                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Gestão de Estoque</span></li>
-                          <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Até 2 Usuários</span></li>
+                <div class="border-2 border-primary-blue rounded-2xl p-8 flex flex-col relative h-full bg-white shadow-2xl shadow-blue-500/20">
+                    <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-primary-blue text-white text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</div>
+                    <h3 class="text-lg font-bold text-primary-blue">Profissional</h3>
+                    <p class="text-slate-500 mt-2">Para acelerar o crescimento.</p>
+                    <p class="text-4xl text-slate-900 font-extrabold my-6 price-tag" data-monthly="129" data-yearly="1290">R$ 129<span class="text-lg font-medium text-slate-500">/mês</span></p>
+                    <a href="https://app.fazeresolve.com/subscribe/professional" class="w-full bg-primary-blue text-white font-semibold py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center">Começar Agora</a>
+                    <ul class="space-y-3 text-slate-600 mt-6 flex-grow">
+                          <li class="flex items-start"><i class="fas fa-star text-primary-blue mr-2 mt-1"></i> <span class="font-bold text-slate-900">Tudo do Essencial, mais:</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Controle Financeiro Completo</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Relatórios de Desempenho</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Gestão de Estoque</span></li>
+                          <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Até 2 Usuários</span></li>
                     </ul>
                 </div>
                 <!-- Plano Premium -->
-                <div class="border border-slate-700 rounded-2xl p-8 flex flex-col h-full bg-slate-800/50 transition-all hover:border-slate-500">
-                    <h3 class="text-lg font-bold text-indigo-400">Premium</h3>
-                    <p class="text-slate-400 mt-2">Para escalar com automação.</p>
-                    <p class="text-4xl text-white font-extrabold my-6 price-tag" data-monthly="199" data-yearly="1990">R$ 199<span class="text-lg font-medium text-slate-400">/mês</span></p>
-                    <a href="https://app.fazeresolve.com/subscribe/premium" class="w-full border border-indigo-500 text-indigo-400 font-semibold py-3 px-4 rounded-lg hover:bg-indigo-500 hover:text-white text-center transition-colors">Começar Agora</a>
-                    <ul class="space-y-3 text-slate-300 mt-6 flex-grow">
-                        <li class="flex items-start"><i class="fas fa-star text-indigo-400 mr-2 mt-1"></i> <span class="font-bold text-white">Tudo do Profissional, mais:</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Controle de Estoque com IA</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Mapa de Demanda (Analytics)</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-indigo-400 mr-2 mt-1"></i> <span>Até 5 Usuários</span></li>
+                <div class="border border-slate-200 rounded-2xl p-8 flex flex-col h-full bg-white transition-all hover:shadow-lg">
+                    <h3 class="text-lg font-bold text-primary-blue">Premium</h3>
+                    <p class="text-slate-500 mt-2">Para escalar com automação.</p>
+                    <p class="text-4xl text-slate-900 font-extrabold my-6 price-tag" data-monthly="199" data-yearly="1990">R$ 199<span class="text-lg font-medium text-slate-500">/mês</span></p>
+                    <a href="https://app.fazeresolve.com/subscribe/premium" class="w-full border border-primary-blue text-primary-blue font-semibold py-3 px-4 rounded-lg hover:bg-primary-blue hover:text-white text-center transition-colors">Começar Agora</a>
+                    <ul class="space-y-3 text-slate-600 mt-6 flex-grow">
+                        <li class="flex items-start"><i class="fas fa-star text-primary-blue mr-2 mt-1"></i> <span class="font-bold text-slate-900">Tudo do Profissional, mais:</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Controle de Estoque com IA</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Mapa de Demanda (Analytics)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-primary-blue mr-2 mt-1"></i> <span>Até 5 Usuários</span></li>
                     </ul>
                 </div>
             </div>
@@ -389,57 +348,57 @@
     </section>
     
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 md:py-28 section-bg">
-        <div class="container mx-auto px-6 max-w-4xl fade-in-section">
+    <section id="faq" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6 max-w-4xl">
              <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Dúvidas? Nós respondemos.</h2>
-                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">As perguntas mais comuns sobre o Faz & Resolve.</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Dúvidas? Nós respondemos.</h2>
+                <p class="text-slate-600 mt-4 max-w-2xl mx-auto">As perguntas mais comuns sobre o Faz & Resolve.</p>
             </div>
             <div class="space-y-4">
-                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6 group">
-                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                <details class="bg-slate-50 border border-slate-200 rounded-lg p-6 group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer">
                         Preciso instalar algo no computador?
                         <i class="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
                     </summary>
-                    <p class="text-slate-300 mt-4">Não! O Faz&Resolve é 100% online. Você acessa de qualquer dispositivo com internet (computador, tablet ou celular) pelo navegador, sem instalar nada.</p>
+                    <p class="text-slate-600 mt-4">Não! O Faz&Resolve é 100% online. Você acessa de qualquer dispositivo com internet (computador, tablet ou celular) pelo navegador, sem instalar nada.</p>
                 </details>
-                <details class="bg-slate-800 border border-slate-700 rounded-lg p-6 group">
-                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                <details class="bg-slate-50 border border-slate-200 rounded-lg p-6 group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer">
                         Meus dados estão seguros?
                         <i class="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
                     </summary>
-                    <p class="text-slate-300 mt-4">Sim, a segurança é nossa prioridade máxima. Usamos criptografia de ponta e as melhores práticas do mercado para garantir que suas informações estejam sempre protegidas.</p>
+                    <p class="text-slate-600 mt-4">Sim, a segurança é nossa prioridade máxima. Usamos criptografia de ponta e as melhores práticas do mercado para garantir que suas informações estejam sempre protegidas.</p>
                 </details>
-                 <details class="bg-slate-800 border border-slate-700 rounded-lg p-6 group">
-                    <summary class="flex justify-between items-center font-bold text-lg text-white">
+                 <details class="bg-slate-50 border border-slate-200 rounded-lg p-6 group">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900 cursor-pointer">
                         Tem contrato de fidelidade?
                         <i class="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
                     </summary>
-                    <p class="text-slate-300 mt-4">Não há fidelidade. Você tem total liberdade para cancelar sua assinatura quando quiser, sem multas ou burocracia. Simples e direto.</p>
+                    <p class="text-slate-600 mt-4">Não há fidelidade. Você tem total liberdade para cancelar sua assinatura quando quiser, sem multas ou burocracia. Simples e direto.</p>
                 </details>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section id="contato" class="py-20 md:py-28">
+    <section id="contato" class="py-20 md:py-28 bg-primary-blue">
          <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-black mb-4 leading-tight text-white">Pronto para transformar a gestão do seu negócio?</h2>
-            <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-8">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight text-white">Pronto para transformar a gestão do seu negócio?</h2>
+            <p class="text-lg text-blue-200 max-w-3xl mx-auto mb-8">
               Deixe a desorganização no passado. Comece a usar o Faz & Resolve hoje e veja seu negócio crescer de forma inteligente.
             </p>
-             <a href="https://app.fazeresolve.com/subscribe" class="inline-block bg-indigo-600 text-white font-bold px-10 py-4 rounded-lg hover:bg-indigo-500 transition-all shadow-2xl shadow-indigo-500/50">
+             <a href="https://app.fazeresolve.com/subscribe" class="inline-block bg-white text-primary-blue font-bold px-10 py-4 rounded-lg hover:bg-slate-100 transition-all">
                  Quero Crescer Meu Negócio
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800">
-        <div class="container mx-auto px-6 py-8 text-center text-slate-400">
+    <footer class="border-t border-slate-200 bg-white">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
              <div class="flex justify-center items-center space-x-4 mb-4">
-                <a href="privacidade.html" class="hover:text-white transition-colors">Política de Privacidade</a>
-                <span class="text-slate-600">|</span>
+                <a href="privacidade.html" class="hover:text-primary-blue transition-colors">Política de Privacidade</a>
+                <span class="text-slate-300">|</span>
                 <p>&copy; 2025 Faz & Resolve. Todos os direitos reservados.</p>
             </div>
             <p class="text-sm">CNPJ: 59.834.629/0001-80</p>
