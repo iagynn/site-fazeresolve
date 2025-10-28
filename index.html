@@ -56,14 +56,14 @@ transform: translateY(20px);
 transform: translateY(0);
         }
 
-        /* INÍCIO DO CÓDIGO ADICIONADO PARA O MARQUEE */
+        /* CÓDIGO DO MARQUEE (sem alterações, já estava correto) */
         @keyframes scroll {
             0% { 
                 transform: translateX(0); 
             }
             100% { 
-                /* Move 100% da largura, o que equivale ao primeiro
-                   conjunto de logos, criando o loop. */
+                /* Move 100% da largura, o que equivale ao
+                   primeiro conjunto de logos, criando o loop. */
                 transform: translateX(-100%); 
             }
         }
@@ -73,7 +73,6 @@ transform: translateY(0);
                controlar a velocidade da rolagem */
             animation: scroll 30s linear infinite;
         }
-        /* FIM DO CÓDIGO ADICIONADO */
     </style>
 </head>
 <body class="text-slate-700">
@@ -449,7 +448,8 @@ Assim que o pagamento é feito, o sistema dá baixa automática no seu financeir
         </div>
     </section>
 
-    <section class="py-20 md:py-28 bg-white"> <div class="container mx-auto px-6 text-center fade-in-up">
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-6 text-center fade-in-up">
             <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
                 Integração com as <span class="text-primary-blue">ferramentas que você já usa</span>
             </h2>
@@ -461,21 +461,22 @@ Assim que o pagamento é feito, o sistema dá baixa automática no seu financeir
                 
                 <div class="flex items-center justify-center md:justify-start [&_img]:max-h-10 [&_img]:w-auto flex-none animate-scroll">
                     
-                    <img src="https://i.imgur.com/ptXfZYB.png" alt="Mercado Pago" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://i.imgur.com/QHEp4VA.png" alt="Google Maps" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://i.imgur.com/AZfyCND.png" alt="Google Calendar" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://i.imgur.com/haQst54.png" alt="WhatsApp" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
+                    <img src="https://i.imgur.com/ptXfZYB.png" alt="Mercado Pago" class="mx-12">
+                    <img src="https://i.imgur.com/QHEp4VA.png" alt="Google Maps" class="mx-12">
+                    <img src="https://i.imgur.com/AZfyCND.png" alt="Google Calendar" class="mx-12">
+                    <img src="https://i.imgur.com/haQst54.png" alt="WhatsApp" class="mx-12">
 
-                    <img src="https://i.imgur.com/ptXfZYB.png" alt="Mercado Pago" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://i.imgur.com/QHEp4VA.png" alt="Google Maps" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://i.imgur.com/AZfyCND.png" alt="Google Calendar" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
-                    <img src="https://i.imgur.com/haQst54.png" alt="WhatsApp" class="mx-12 grayscale hover:grayscale-0 transition-all duration-300">
+                <div class="flex items-center justify-center md:justify-start [&_img]:max-h-10 [&_img]:w-auto flex-none animate-scroll" aria-hidden="true">
+                    
+                    <img src="https://i.imgur.com/ptXfZYB.png" alt="Mercado Pago" class="mx-12">
+                    <img src="https://i.imgur.com/QHEp4VA.png" alt="Google Maps" class="mx-12">
+                    <img src="https://i.imgur.com/AZfyCND.png" alt="Google Calendar" class="mx-12">
+                    <img src="https://i.imgur.com/haQst54.png" alt="WhatsApp" class="mx-12">
                 </div>
-            </div>
         </div>
+                       </div>
     </section>
-    <section class="py-20 md:py-28 bg-white">
-        <div class="container mx-auto px-6 text-center fade-in-up">
+    <section class="py-20 md:py-28 bg-white"> <div class="container mx-auto px-6 text-center fade-in-up">
             <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900">Histórias de quem já está dobrando o lucro.</h2>
           
   <p class="text-slate-600 mt-4 max-w-2xl mx-auto">Veja o que nossos clientes estão dizendo sobre a transformação em seus negócios.</p>
